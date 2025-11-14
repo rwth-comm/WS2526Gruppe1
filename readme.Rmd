@@ -18,5 +18,5 @@ date: "2025-10-27"
 ![Faktorenraum](bilder/Faktorenraum.jpg)
 
 ##Validierte Messinstrumente
-Technikakzeptanz
+
 
