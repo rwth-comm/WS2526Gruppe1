@@ -15,6 +15,5 @@ date: "2025-10-27"
 
 ## Faktorenraum
 
-
 ![Faktorenraum](bilder/Faktorenraum.jpg)
 
