@@ -30,9 +30,9 @@ date: "2025-10-27"
 ## Hypothesen
 
 ### Unterschiedshypothesen
-LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Jüngere und ältere Menschen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+1. LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+2. Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+3. Jüngere und ältere Menschen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Unterschiedshypothese für ANOVA
 Bildung hat einen Einfluss auf die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.

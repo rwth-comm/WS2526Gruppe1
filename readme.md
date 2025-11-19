@@ -31,12 +31,12 @@ application”: I18 raus. “Solve problems”: I23, I25 raus.
 
 ### Unterschiedshypothesen
 
-LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
-Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von
-innovativen Services der Kommunalverwaltung. Jüngere und ältere Menschen
-unterscheiden sich in der Nutzungbereitschaft von innovativen Services
-der Kommunalverwaltung.
+1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
+    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+2.  Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von
+    innovativen Services der Kommunalverwaltung.
+3.  Jüngere und ältere Menschen unterscheiden sich in der
+    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Unterschiedshypothese für ANOVA
 
