@@ -28,8 +28,6 @@ date: "2025-10-27"
 
 
 ## Hypothesen
-hier kommen die tollen Hypothesen hin
-
 
 ### Unterschiedshypothesen
 LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
@@ -41,11 +39,11 @@ Bildung hat einen Einfluss auf die Nutzungbereitschaft von innovativen Services 
 
 
 ### Zusammenhangshypothesen
-Es gibt einen Zusammenhang zwischen dem Einkommen und der  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Es gibt einen Zusammenhang zwischen Bildungsabschluss und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Es gibt einen positiven Zusammenhang zwischen Jobstatus und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen Zusammenhang zwischen der Technikaffinität und der  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Zusammenhangshypothese für multiple lineare Regression
-Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung ist abhängig von 
+Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung ist abhängig von Einkommen, Bildungsabschluss und Jobstatus. 
 
 
