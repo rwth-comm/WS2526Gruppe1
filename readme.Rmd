@@ -31,10 +31,20 @@ hier kommen die tollen Hypothesen hin
 
 
 ### Unterschiedshypothesen
-hier 4 Stück
+LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Jüngere und ältere Menschen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+
+#### Unterschiedshypothese für ANOVA
+Bildung hat einen Einfluss auf die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 
 ### Zusammenhangshypothesen
-hier 4 Stück
+Es gibt einen Zusammenhang zwischen dem Einkommen und der  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen Zusammenhang zwischen Bildungsabschluss und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen positiven Zusammenhang zwischen Jobstatus und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+
+#### Zusammenhangshypothese für multiple lineare Regression
+Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung ist abhängig von 
 
 
