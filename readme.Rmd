@@ -29,24 +29,22 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 
 
 ## Hypothesen
-hier kommen die tollen Hypothesen hin
-
 
 ### Unterschiedshypothesen
-LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Jüngere und ältere Menschen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+1. LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+2. Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+3. Jüngere und ältere Menschen unterscheiden sich in der Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Unterschiedshypothese für ANOVA
 Bildung hat einen Einfluss auf die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 
 ### Zusammenhangshypothesen
-Es gibt einen Zusammenhang zwischen dem Einkommen und der  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Es gibt einen Zusammenhang zwischen Bildungsabschluss und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-Es gibt einen positiven Zusammenhang zwischen Jobstatus und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen Zusammenhang zwischen der Technikaffinität und der  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und  Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Zusammenhangshypothese für multiple lineare Regression
-Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung ist abhängig von 
+Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung ist abhängig von Einkommen, Bildungsabschluss und Jobstatus. 
 
 
