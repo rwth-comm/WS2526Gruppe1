@@ -40,19 +40,20 @@ application”: I18 raus. “Solve problems”: I23, I25 raus.
 
 #### Unterschiedshypothese für ANOVA
 
-Bildung hat einen Einfluss auf die Nutzungbereitschaft von innovativen
-Services der Kommunalverwaltung.
+1.  Bildung hat einen Einfluss auf die Nutzungbereitschaft von
+    innovativen Services der Kommunalverwaltung.
 
 ### Zusammenhangshypothesen
 
-Es gibt einen Zusammenhang zwischen der Technikaffinität und der
-Nutzungbereitschaft von innovativen Services der Kommunalverwaltung. Es
-gibt einen Zusammenhang zwischen Digital Literacy und
-Nutzungbereitschaft von innovativen Services der Kommunalverwaltung. Es
-gibt einen positiven Zusammenhang zwischen KI-Vertrauen und
-Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+1.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
+    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+2.  Es gibt einen Zusammenhang zwischen Digital Literacy und
+    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+3.  Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und
+    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
-Die Nutzungbereitschaft von innovativen Services der Kommunalverwaltung
-ist abhängig von Einkommen, Bildungsabschluss und Jobstatus.
+1.  Die Nutzungbereitschaft von innovativen Services der
+    Kommunalverwaltung ist abhängig von Einkommen, Bildungsabschluss und
+    Jobstatus.
