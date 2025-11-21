@@ -40,28 +40,33 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 ### Unterschiedshypothesen
 
 1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
-    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
-2.  Männer und Frauen unterscheiden sich in der Nutzungbereitschaft von
+    Nutzungsbereitschaft von innovativen Services der
+    Kommunalverwaltung.
+2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft von
     innovativen Services der Kommunalverwaltung.
-3.  Jüngere und ältere Menschen unterscheiden sich in der
-    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
+    höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
 #### Unterschiedshypothese für ANOVA
 
-1.  Bildung hat einen Einfluss auf die Nutzungbereitschaft von
-    innovativen Services der Kommunalverwaltung.
+1.  Wohnort und Bildung haben einen Einfluss auf die
+    Nutzungsbereitschaft von innovativen Services der
+    Kommunalverwaltung.
 
 ### Zusammenhangshypothesen
 
 1.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
-    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+    Nutzungsbereitschaft von innovativen Services der
+    Kommunalverwaltung.
 2.  Es gibt einen Zusammenhang zwischen Digital Literacy und
-    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+    Nutzungsbereitschaft von innovativen Services der
+    Kommunalverwaltung.
 3.  Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und
-    Nutzungbereitschaft von innovativen Services der Kommunalverwaltung.
+    Nutzungsbereitschaft von innovativen Services der
+    Kommunalverwaltung.
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
-1.  Die Nutzungbereitschaft von innovativen Services der
+1.  Die Nutzungsbereitschaft von innovativen Services der
     Kommunalverwaltung ist abhängig von Einkommen, Bildungsabschluss und
     Jobstatus.
