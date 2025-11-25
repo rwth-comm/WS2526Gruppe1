@@ -41,12 +41,15 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
     Nutzungsbereitschaft von innovativen Services der
-    Kommunalverwaltung. &gt; Feedback JRH: Test
+    Kommunalverwaltung.
 
-2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft von
+<!-- -->
+
+    Das klingt so als würden Sie aus den vier AVs im Fragebogen eine machen, korrekt?
+
+1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft von
     innovativen Services der Kommunalverwaltung.
-
-3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
+2.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
 #### Unterschiedshypothese für ANOVA
@@ -54,6 +57,10 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 1.  Wohnort und Bildung haben einen Einfluss auf die
     Nutzungsbereitschaft von innovativen Services der
     Kommunalverwaltung.
+
+<!-- -->
+
+    Das ist handwerklich einwandfrei. Später in der Auswertung wird ihnen hier aber höchstwahrscheinlich auffallen, dass die Stichprobe hierfür nicht geeignet ist. Wenn Wohnort 3 Stufen hat und Bildung auch, haben Sie 3x3 = 9 verschiedene Gruppen (niedriger Bildungsstand Land, mittlerer Bildungsstand Land, usw.). Die Chance, dass eine dieser Gruppen leer ist, ist groß. Sie können die Hypothese so lassen, aber bitte stellen Sie sich drauf ein, dass Sie eine der Variablen umgruppieren müssen als z.B. Hochschulreife vs. keine Hochschulreife. 
 
 ### Zusammenhangshypothesen
 
@@ -72,3 +79,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 1.  Die Nutzungsbereitschaft von innovativen Services der
     Kommunalverwaltung ist abhängig von Einkommen, Bildungsabschluss und
     Jobstatus.
+
+<!-- -->
+
+    Das passt alles so. Nutzungsbereitschaft von digitalen Services fast immer als AV zu nehmen kann Ihnen aber nach p-hacking ausgelegt werden (Erklärung später). Für diese Woche passt das, ich würde Ihnen aber empfehlen, die Hypothesen später nochmal anzupassen und z.B. zwischen den Szenarien zu varriieren. 
