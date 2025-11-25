@@ -41,9 +41,11 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
     Nutzungsbereitschaft von innovativen Services der
-    Kommunalverwaltung.
+    Kommunalverwaltung. &gt; Feedback JRH: Test
+
 2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft von
     innovativen Services der Kommunalverwaltung.
+
 3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
