@@ -11,7 +11,7 @@ date: "2025-10-27"
 * Marie 
 
 ## Forschungsfrage
-"Welche Faktoren beeinflussen die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung?"
+"Welche Faktoren beeinflussen die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung bei Weitergabe der Daten an private oder öffentliche Träger?"
 
 ## Faktorenraum
 
