@@ -7,7 +7,8 @@
 ## Forschungsfrage
 
 “Welche Faktoren beeinflussen die Nutzungsbereitschaft von innovativen
-Services der Kommunalverwaltung?”
+Services der Kommunalverwaltung bei Weitergabe der Daten an private oder
+öffentliche Träger?”
 
 ## Faktorenraum
 
