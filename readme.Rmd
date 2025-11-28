@@ -35,7 +35,7 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 2. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
 
-#### Unterschiedshypothese für ANOVA
+#### Unterschiedshypothese für MANOVA
 1. LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und Szenario B (privatwirtschaftliche Zwecke).
 
 

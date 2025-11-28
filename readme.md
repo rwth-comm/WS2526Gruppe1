@@ -44,7 +44,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
-#### Unterschiedshypothese für ANOVA
+#### Unterschiedshypothese für MANOVA
 
 1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
     Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und
