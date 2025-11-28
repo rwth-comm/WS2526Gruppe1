@@ -42,10 +42,8 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario A.
-
 2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario B.
-
 3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
