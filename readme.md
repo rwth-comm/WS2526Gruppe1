@@ -41,30 +41,31 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 ### Unterschiedshypothesen
 
 1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
-    Szenario A.
+    Szenario A (öffentlicher Dienst).
 2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
-    Szenario B.
+    Szenario B (privatwirtschaftliche Zwecke).
 3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
 #### Unterschiedshypothese für ANOVA
 
 1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
-    Nutzungsbereitschaft in Szenario A und Szenario B.
+    Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und
+    Szenario B (privatwirtschaftliche Zwecke).
 
 ### Zusammenhangshypothesen
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
-    Nutzungsbereitschaft in Szenario A.
+    Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 2.  Es gibt einen Zusammenhang zwischen Digital Literacy und
-    Nutzungsbereitschaft in Szenario B.
+    Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 3.  Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und
-    Nutzungsbereitschaft in Szenario A.
+    Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 4.  Es gibt einen positiven Zusammenhang zwischen KI-Vertrauen und
-    Nutzungsbereitschaft in Szenario B.
+    Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
 1.  Die Nutzungsbereitschaft von innovativen Services der
-    Kommunalverwaltung in Szenario B ist abhängig von Einkommen,
-    Bildungsabschluss und Jobstatus.
+    Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist
+    abhängig von Einkommen, Bildungsabschluss und Jobstatus.
