@@ -69,3 +69,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 1.  Die Nutzungsbereitschaft von innovativen Services der
     Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist
     abhängig von Einkommen, Bildungsabschluss und Jobstatus.
+
+## Operationalisierung
+
+hier kommt toller Text hin
