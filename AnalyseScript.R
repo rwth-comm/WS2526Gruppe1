@@ -1,8 +1,6 @@
-install.packages("tidyverse")
-install.packages("psych")
-
 library(tidyverse)
 library(psych)
+source("qualtricshelpers.R")
 
 raw <- read_csv("data/datacleaning_Beispieldaten.csv")
 raw <- raw[c(-1,-2),]
