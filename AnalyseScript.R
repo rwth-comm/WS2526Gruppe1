@@ -50,3 +50,5 @@ schluesselliste <- list(
   SVI = c("svi_3", "svi_5", "-svi_1n", "-svi_2n", "-svi_4n")
 )
 
+# scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
+# habe das auskommentiert weil der bei mir nur noch buggt, vllt stimmt was mit den packages nicht oder so
