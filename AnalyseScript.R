@@ -38,4 +38,15 @@ raw.short$ANAG <- as.factor(recode(raw.short$ANAG,
                                   `6` = "Rentner/-in"))
 # service comment: bei uns heißt die Variable JobType ANAG (siehe Fragebogen)
 
-schluesselliste <- list()
+schluesselliste <- list(
+  BF_extraversion = c("-bf_2n", "bf_6"),
+  BF_Agreeableness = c("bf_2", "-bf_7n"),
+  BF_Openness = c("-bf_5n", "bf_10"),
+  BF_Neuroticism = c("-bf_4n", "bf_9"),
+  BF_Concientiousness = c("-bf_3n", "bf_8"),
+  ATI = c("ati_1", "ati_2", "-ati_3n", "ati_4", "ati_5", "-ati_6n", "ati_7", "-ati_8n", "ati_9"),
+  PRO = c("wrfq_1", "wrfq_2", "wrfq_3", "wrfq_4", "wrfq_9"),
+  PRE = c("wrfq_5", "wrfq_6", "wrfq_7", "wrfq_8"),
+  SVI = c("svi_3", "svi_5", "-svi_1n", "-svi_2n", "-svi_4n")
+)
+
