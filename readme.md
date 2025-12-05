@@ -68,4 +68,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ## Operationalisierung
 
-antizipierte Proband\*innenanzahl: 360
+antizipierte ProbandInnenanzahl: n=360  
+Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  
+Power: 0,8 weil man das so macht  
+kleinste Effektstärke, die wir messen können (ausgerechnet): d=0,2091038

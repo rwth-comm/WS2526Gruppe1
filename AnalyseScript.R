@@ -52,3 +52,8 @@ schluesselliste <- list(
 
 # scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
 # habe das auskommentiert weil der bei mir nur noch buggt, vllt stimmt was mit den packages nicht oder so
+
+
+
+# Poweranalyse: Wir suchen die Effektstärke
+pwr::pwr.t.test(n = 360, sig.level = 0.05 , d = NULL, power = 0.8)
