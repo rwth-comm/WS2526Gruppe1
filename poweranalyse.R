@@ -6,6 +6,7 @@ pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d = 0.8, power = 0.8)
 
 # Variante 2: Signifikanzniveau gesucht ----
 pwr::pwr.t.test(n = 200, sig.level = NULL , d = 0.2, power = 0.8)
+# service comment: sehr selten angewendetes Verfahren. Zeigt uns, wie unser Signifikantsniveau sein muss, um einen kleinen Effekt zu messen.
 
 # Variante 3: Effektstärke gesucht ----
 pwr::pwr.t.test(n = 110, sig.level = 0.05 , d = NULL, power = 0.8)
@@ -23,3 +24,4 @@ t.test(df_male$privacy_concerns, df_female$privacy_concerns)
 cohensD(df_male$privacy_concerns, df_female$privacy_concerns)
 
 pwr::pwr.t.test(n = 122, sig.level = 0.05, d = 0.04400775, power = NULL)
+# service comment: auch hier, wenn man nach power prüft, kann man über die Nullhypothese eine Aussage treffen. wenn Power hier > 0.8, kann man die H0 verwerfen (?), wenn sie kleiner ist, kann man keine Aussage treffen (agnostischer Zustand)
