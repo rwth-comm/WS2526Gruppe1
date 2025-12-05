@@ -68,4 +68,4 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ## Operationalisierung
 
-antizipierte Proband\*innenanzahl: 360 gg
+antizipierte Proband\*innenanzahl: 360
