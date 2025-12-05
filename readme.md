@@ -68,7 +68,19 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ## Operationalisierung
 
+future text
+
+## Poweranalyse
+
 antizipierte ProbandInnenanzahl: n=360  
+wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die
+Gruppe geteilt)  
 Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  
-Power: 0,8 weil man das so macht  
-kleinste Effektstärke, die wir messen können (ausgerechnet): d=0,2091038
+Power (1-(4 · *α*)): 0,8  
+kleinste Effektstärke, die wir messen können (ausgerechnet):
+d=0.2961082  
+Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach
+antizipiertem Effekt brauchen.  
+n(d=0.2; “schwach”)=786.8114  
+n(d=0.5; “mittel”)=127.5312  
+n(d=0.8; “hoch”)=51.04916

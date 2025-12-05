@@ -20,26 +20,25 @@ names(raw.short) <- c("Duration", "ResponseId", "Age", "Gender", "Edu", "JobType
                       "wrfq_6", "wrfq_7", "wrfq_8", "wrfq_9", 
                       "svi_1n", "svi_2n", "svi_3", "svi_4n", "svi_5")
 
-raw.short$age <- as.numeric(raw.short$age)
-raw.short$gender <- as.factor(recode(raw.short$gender,
+raw.short$Age <- as.numeric(raw.short$Age)
+raw.short$Gender <- as.factor(recode(raw.short$Gender,
                            `1` = "männlich", `2` = "weiblich", `3` = "divers"))
-raw.short$edu <- ordered(raw.short$edu, levels=c(1:5),
+raw.short$Edu <- ordered(raw.short$Edu, levels=c(1:5),
                         labels = c("Haupt-oder Realschulabschluss",
                                     "Fach-/Hochschulreife (Abitur)",
                                     "Ausbildung",
                                     "Hochschulabschluss",
                                     "Promotion"))
-raw.short$ANAG <- as.factor(recode(raw.short$ANAG,
+raw.short$JobType <- as.factor(recode(raw.short$JobType,
                                   `1` = "In Ausbildung / Studium", 
                                   `2` = "Arbeitnehmer/-in und Studierende/-r", 
                                   `3` = "Arbeitnehmer/-in", 
                                   `4` = "Arbeitgeber/-in", 
                                   `5` = "Selbstständig ohne Mitarbeiter", 
                                   `6` = "Rentner/-in"))
-# service comment: bei uns heißt die Variable JobType ANAG (siehe Fragebogen)
 
 schluesselliste <- list(
-  BF_extraversion = c("-bf_2n", "bf_6"),
+  BF_extraversion = c("-bf_1n", "bf_6"),
   BF_Agreeableness = c("bf_2", "-bf_7n"),
   BF_Openness = c("-bf_5n", "bf_10"),
   BF_Neuroticism = c("-bf_4n", "bf_9"),
@@ -50,10 +49,23 @@ schluesselliste <- list(
   SVI = c("svi_3", "svi_5", "-svi_1n", "-svi_2n", "-svi_4n")
 )
 
-# scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
-# habe das auskommentiert weil der bei mir nur noch buggt, vllt stimmt was mit den packages nicht oder so
+scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
 
+scores$alpha
+
+data<- bind_cols(raw.short, scores$scores)
+
+write_rds(data, "data/data.rds")
 
 
 # Poweranalyse: Wir suchen die Effektstärke
-pwr::pwr.t.test(n = 360, sig.level = 0.05 , d = NULL, power = 0.8)
+pwr::pwr.t.test(n = 180, sig.level = 0.05 , d = NULL, power = 0.8)
+
+# Poweranalyse: Wir suchen die notwendigen Stichprobengrößen je nach antizipiertem Effekt
+# kleiner Effekt
+pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d =0.2, power = 0.8)
+393.4057*2
+pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d =0.5, power = 0.8)
+63.76561*2
+pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d =0.8, power = 0.8)
+25.52458*2
