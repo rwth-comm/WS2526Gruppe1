@@ -67,7 +67,6 @@ scores$alpha
 data<- bind_cols(raw.short, scores$scores)
 
 # Daten exportieren ----
-
 write_rds(data, "data/data.rds")
 
 
