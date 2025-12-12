@@ -12,7 +12,7 @@ raw %>%
   filter(Status == 4) -> raw
 
 # Überflüssige Variablen entfernen ----
-raw.short <- raw[,c(6,9,18:54)]
+raw.short <- raw[,c(5:6,9,16,19:24,40:45,53:70,92:97,101:102)]
 
 # Variablen umbenennen ----
 generate_codebook(raw.short, "data/datacleaning_Beispieldaten.csv", "data/codebook.csv")
