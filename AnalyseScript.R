@@ -15,7 +15,7 @@ raw %>%
 raw.short <- raw[,c(6,9,19:24,40:45,53:70,92:97,101:102)]
 
 # Variablen umbenennen ----
-generate_codebook(raw.short, "data/datacleaning_Beispieldaten.csv", "data/codebook.csv")
+generate_codebook(raw.short, "data/BeispieldatenWS2526.csv", "data/codebook.csv")
 codebook <- read_codebook("data/codebook_final.csv")
 names(raw.short) <- codebook$variable
 
