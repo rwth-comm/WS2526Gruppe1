@@ -72,7 +72,7 @@ future text
 
 ## Poweranalyse
 
-antizipierte ProbandInnenanzahl: n=360  
+![Power](power.jpg) antizipierte ProbandInnenanzahl: n=360  
 wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die
 Gruppe geteilt)  
 Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  

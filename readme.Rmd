@@ -53,7 +53,8 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 ## Operationalisierung
 future text
 
-## Poweranalyse
+## Poweranalyse  
+![Power](power.jpg)
 antizipierte ProbandInnenanzahl: n=360  
 wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die Gruppe geteilt)  
 Signifikanzniveau (wir sind SozialwissenschaftlerInnen): $\alpha$ = 0,05  
