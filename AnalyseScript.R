@@ -4,7 +4,7 @@ library(psych)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
-raw <- load_qualtrics_csv("data/datacleaning_Beispieldaten.csv")
+raw <- load_qualtrics_csv("data/BeispieldatenWS2526.csv")
 
 # Rohdaten filtern ----
 raw %>% 
@@ -70,7 +70,7 @@ data<- bind_cols(raw.short, scores$scores)
 write_rds(data, "data/data.rds")
 
 
-# Poweranalyse: Wir suchen die Effektstärke
+# Poweranalyse: Wir suchen die Effektstärke ----
 pwr::pwr.t.test(n = 180, sig.level = 0.05 , d = NULL, power = 0.8)
 
 # Poweranalyse: Wir suchen die notwendigen Stichprobengrößen je nach antizipiertem Effekt
