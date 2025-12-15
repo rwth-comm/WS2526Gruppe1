@@ -4,6 +4,8 @@
 -   Henrik
 -   Marie
 
+## Setup-Chunk
+
 ## Forschungsfrage
 
 “Welche Faktoren beeinflussen die Nutzungsbereitschaft von innovativen
