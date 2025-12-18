@@ -41,7 +41,7 @@ raw.short$JobType %>% recode(`1` = "In Ausbildung / Studium",
                              `3` = "Arbeitnehmer/-in", 
                              `4` = "Arbeitgeber/-in", 
                              `5` = "Selbstständig ohne Mitarbeiter", 
-                             `6` = "Rentner/-in")) %>% 
+                             `6` = "Rentner/-in") %>% 
   as.factor() -> raw.short$JobType
 
 # Qualitätskontrolle ----
@@ -49,15 +49,11 @@ raw.short$JobType %>% recode(`1` = "In Ausbildung / Studium",
 # Skalenwerte berechnen ----
 
 schluesselliste <- list(
-  BF_extraversion = c("-bf_1n", "bf_6"),
-  BF_Agreeableness = c("bf_2", "-bf_7n"),
-  BF_Openness = c("-bf_5n", "bf_10"),
-  BF_Neuroticism = c("-bf_4n", "bf_9"),
-  BF_Concientiousness = c("-bf_3n", "bf_8"),
-  ATI = vars4psych(raw.short, "ati"),
-  PRO = c("wrfq_1", "wrfq_2", "wrfq_3", "wrfq_4", "wrfq_9"),
-  PRE = c("wrfq_5", "wrfq_6", "wrfq_7", "wrfq_8"),
-  SVI = vars4psych(raw.short, "svi")
+  AD = c("ad_1", "ad_2", "ad_3"),
+  Priv = c("priv_1", "priv_2", "priv_3"),
+  DigLit = c("digLit_1", "digLit_2", "digLit_3", "digLit_4", "digLit_5", "digLit_6", "digLit_7", "digLit_8", "digLit_9", "digLit_9", "digLit_10", "digLit_11", "digLit_12", "digLit_13", "digLit_14", "digLit_15", "digLit_16", "digLit_17", "digLit_18"),
+  SzOeff = c("szOeff_1", "szOeff_2", "szOeff_3"),
+  SzPriv = c("szPriv_1", "szPriv_2", "szPriv_3")
 )
 
 scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
