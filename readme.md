@@ -41,10 +41,54 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario A (öffentlicher Dienst).
-2.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
+
+<!-- -->
+
+    ## 
+    ##  Welch Two Sample t-test
+    ## 
+    ## data:  df_male$SzOeff and df_female$SzOeff
+    ## t = -0.98714, df = 136.75, p-value = 0.3253
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.4263418  0.1424190
+    ## sample estimates:
+    ## mean of x mean of y 
+    ##  2.995025  3.136986
+
+1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario B (privatwirtschaftliche Zwecke).
-3.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
+
+<!-- -->
+
+    ## 
+    ##  Welch Two Sample t-test
+    ## 
+    ## data:  df_male$SzPriv and df_female$SzPriv
+    ## t = -1.4894, df = 137.95, p-value = 0.1387
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.60089937  0.08457687
+    ## sample estimates:
+    ## mean of x mean of y 
+    ##  3.303483  3.561644
+
+1.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
+
+<!-- -->
+
+    ## 
+    ##  Paired t-test
+    ## 
+    ## data:  df$SzOeff and df$SzPriv
+    ## t = -9.3523, df = 499, p-value < 2.2e-16
+    ## alternative hypothesis: true mean difference is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.4461165 -0.2912168
+    ## sample estimates:
+    ## mean difference 
+    ##      -0.3686667
 
 #### Unterschiedshypothese für MANOVA
 
@@ -56,8 +100,37 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
-2.  Es gibt einen Zusammenhang zwischen Digital Literacy und
+
+<!-- -->
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$DigLit and df$SzOeff
+    ## t = 1.7904, df = 498, p-value = 0.07399
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.007771312  0.166496730
+    ## sample estimates:
+    ##        cor 
+    ## 0.07997378
+
+1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
+
+<!-- -->
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$DigLit and df$SzPriv
+    ## t = 0.51737, df = 498, p-value = 0.6051
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.06464451  0.11064317
+    ## sample estimates:
+    ##        cor 
+    ## 0.02317746
 
 #### Zusammenhangshypothese für multiple lineare Regression
 

@@ -42,14 +42,24 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 ### Unterschiedshypothesen
 1. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 
-```{r}
-df_male <- filter(df$gender == "männlich")
-df_female <- filter(df$gender == "weiblich")
-t.test(dfmale$)
+```{r, echo = FALSE}
+df_male <- filter(df, df$Gender == "Männlich")
+df_female <- filter(df, df$Gender == "Weiblich")
+t.test(df_male$SzOeff, df_female$SzOeff)
 ```
 
 2. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
+```{r, echo = FALSE}
+t.test(df_male$SzPriv, df_female$SzPriv)
+```
+
+
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
+```{r, echo=FALSE}
+t.test(df$SzOeff, df$SzPriv, paired = TRUE)
+```
+
+
 
 #### Unterschiedshypothese für MANOVA
 1. LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und Szenario B (privatwirtschaftliche Zwecke).
@@ -57,7 +67,16 @@ t.test(dfmale$)
 
 ### Zusammenhangshypothesen
 1. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
+```{r, echo = FALSE}
+cor.test(df$DigLit, df$SzOeff)
+```
+
+
 2. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
+```{r, echo = FALSE}
+cor.test(df$DigLit, df$SzPriv)
+```
+
 
 
 #### Zusammenhangshypothese für multiple lineare Regression
