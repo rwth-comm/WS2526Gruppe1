@@ -32,7 +32,7 @@ ggsave(filename = "histogram.png", width = 15, height = 12, units = "cm")
 library(ggplot2)
 
 df %>% 
-  filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
+  filter(Gender == "männlich" | Gender == "weiblich") %>% 
   ggplot() +
   aes(x = ATI, y = Gender) +
   geom_boxplot(fill = aachen_color("blue75", "red75")) +
