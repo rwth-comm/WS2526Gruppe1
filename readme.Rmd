@@ -12,10 +12,14 @@ date: "2025-10-27"
 
 ## Setup-Chunk
 ```{r, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(jmv)
+library(ggplot2)
+library(AachenColorPalette)
 df <- readRDS("data/data.rds")
+
 ```
 
 
@@ -100,6 +104,26 @@ Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach antizipiert
 n(d=0.2; "schwach")=786.8114  
 n(d=0.5; "mittel")=127.5312  
 n(d=0.8; "hoch")=51.04916  
+
+## Histogramm Altersverteilung
+
+
+```{r, echo=FALSE}
+
+ggplot(df) +
+  aes(x = Age) +
+  geom_histogram(bins = 30L, fill = aachen_color("purple")) +
+  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
+  geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
+  labs(x = "Alter in Jahren", 
+       y = "Anzahl", 
+       title = paste0("Altersverteiliung n = (", nrow(df), ")"), 
+       subtitle = "Histogramm der Altersverteilung", 
+       caption = "30 Bins") +
+  theme_minimal()
+
+
+```
 
 
 

@@ -164,3 +164,10 @@ antizipiertem Effekt brauchen.
 n(d=0.2; “schwach”)=786.8114  
 n(d=0.5; “mittel”)=127.5312  
 n(d=0.8; “hoch”)=51.04916
+
+## Histogramm Altersverteilung
+
+    ## Warning: Removed 256 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
