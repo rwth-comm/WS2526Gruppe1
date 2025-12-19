@@ -29,12 +29,12 @@ raw.short$Gender %>%
   as.factor() -> raw.short$Gender
 
 raw.short$Edu %>% 
-  ordered(levels=c(1:5),
-          labels = c("Haupt-oder Realschulabschluss",
-                     "Fach-/Hochschulreife (Abitur)",
-                     "Ausbildung",
-                     "Hochschulabschluss",
-                     "Promotion")) -> raw.short$Edu
+  ordered(levels = c(1:5),
+          labels = c("(noch) kein Schulabschluss",
+                     "Hauptschulabschluss",
+                     "Realschulabschluss",
+                     "Abitur",
+                     "Hochschulabschluss")) -> raw.short$Edu
 
 raw.short$Jobstatus %>% recode(`1` = "In Ausbildung / Studium", 
                                `2` = "Arbeitnehmer/-in und Studierende/-r", 
