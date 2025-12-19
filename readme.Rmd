@@ -112,7 +112,7 @@ n(d=0.8; "hoch")=51.04916
 
 ggplot(df) +
   aes(x = Age) +
-  geom_histogram(bins = 30L, fill = aachen_color("purple")) +
+  geom_histogram(bins = 30L, fill = aachen_color("purple75")) +
   geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
   geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
   labs(x = "Alter in Jahren", 
