@@ -36,12 +36,14 @@ raw.short$Edu %>%
                      "Hochschulabschluss",
                      "Promotion")) -> raw.short$Edu
 
-raw.short$Jobstatus %>% recode(`1` = "In Ausbildung / Studium", 
-                               `2` = "Arbeitnehmer/-in und Studierende/-r", 
-                               `3` = "Arbeitnehmer/-in", 
-                               `4` = "Arbeitgeber/-in", 
-                               `5` = "Selbstständig ohne Mitarbeiter", 
-                               `6` = "Rentner/-in") %>% 
+raw.short$Jobstatus %>% recode(`1` = "In Ausbildung", 
+                               `2` = "Arbeitnehmer/in", 
+                               `3` = "Arbeitgeber/in", 
+                               `4` = "Selbstständig", 
+                               `5` = "Beamter/-in", 
+                               `6` = "Im Ruhestand",
+                               `7` = "Hausmann/-frau",
+                               `8` = "Sonstiges (bitte angeben)")%>% 
   as.factor() -> raw.short$Jobstatus
 
 # Qualitätskontrolle ----
