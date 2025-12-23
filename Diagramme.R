@@ -11,7 +11,7 @@ library(AachenColorPalette)
 
 df <- readRDS("data/data.rds")
 
-display_aachen_colors()
+
 
 library(ggplot2)
 
