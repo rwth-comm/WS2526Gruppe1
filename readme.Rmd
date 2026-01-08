@@ -74,7 +74,20 @@ t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzOeff)
 ```
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = DigLit, y = SzOeff) +
+  geom_jitter() +
+  labs(
+    x = " ",
+    y = " ",
+    title = " ",
+    subtitle = " ",
+    caption = " "
+  ) +
+  theme_minimal()
 
+```
 
 2. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
