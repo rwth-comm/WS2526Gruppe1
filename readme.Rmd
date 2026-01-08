@@ -78,16 +78,13 @@ cor.test(df$DigLit, df$SzOeff)
 ```{r, echo = FALSE}
 ggplot(df) +
   aes(x = DigLit, y = SzOeff) +
-  geom_jitter(shape = "circle", size = 1, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
+    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
   geom_smooth(method = "lm", color = rwthcolor$lightblue) +
-  geom_jitter() +
-  labs(
-    x = "Digital Literacy",
-    y = "Nutzungsbereitschaft für Szenario A (öffentlicher Dienst)",
-    title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario A (öffentlicher Dienst)",
-    subtitle = " ",
-    caption = " "
-  ) +
+  labs(x = "Digital Literacy", 
+       y = "Nutzungsbereitschaft für Szenario A (öffentlicher Dienst)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario A (öffentlicher Dienst)", 
+       subtitle = "", 
+       caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
   theme_minimal()
 
 ```
