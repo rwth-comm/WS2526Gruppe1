@@ -52,16 +52,45 @@ df_male <- filter(df, df$Gender == "Männlich")
 df_female <- filter(df, df$Gender == "Weiblich")
 t.test(df_male$SzOeff, df_female$SzOeff)
 ```
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = Gender, y = SzOeff) +
+  geom_col(fill = "#112446") +
+  labs(
+    x = "Geschlecht",
+    y = "Nutzungsbereitschaft Szenario A (Öffentlich)",
+    title = "Nutzungsbereitschaft Szenario A (Öffentlich) nach Geschlecht",
+    subtitle = " ",
+    caption = " "
+  ) +
+  theme_minimal()
+
+```
 
 2. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
 t.test(df_male$SzPriv, df_female$SzPriv)
 ```
-
+```{r, echo= FALSE}
+ggplot(df) +
+  aes(x = Gender, y = SzPriv) +
+  geom_col(fill = "#112446") +
+  labs(
+    x = "Geschlecht",
+    y = "Nutzungsbereitschaft Szenario B (Privat)",
+    title = "Nutzungsbereitschaft Szenario B (Privat) nach Geschlecht",
+    subtitle = " ",
+    caption = " "
+  ) +
+  theme_minimal()
+```
 
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
 ```{r, echo=FALSE}
 t.test(df$SzOeff, df$SzPriv, paired = TRUE)
+```
+```{r, echo= FALSE}
+
 ```
 
 
