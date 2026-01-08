@@ -115,6 +115,10 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##        cor 
     ## 0.07997378
 
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 
@@ -170,4 +174,4 @@ n(d=0.8; “hoch”)=51.04916
     ## Warning: Removed 256 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
