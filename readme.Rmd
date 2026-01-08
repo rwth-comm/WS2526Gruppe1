@@ -93,8 +93,19 @@ ggplot(df) +
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzPriv)
 ```
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = DigLit, y = SzPriv) +
+    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
+  geom_smooth(method = "lm", color = rwthcolor$lightblue) +
+  labs(x = "Digital Literacy", 
+       y = "Nutzungsbereitschaft für Szenario B (private Dienste)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario B (privater Dienst)", 
+       subtitle = "", 
+       caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
+  theme_minimal()
 
-
+```
 
 #### Zusammenhangshypothese für multiple lineare Regression
 1. Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  

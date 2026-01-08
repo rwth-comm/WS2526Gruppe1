@@ -136,6 +136,10 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##        cor 
     ## 0.02317746
 
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+
 #### Zusammenhangshypothese für multiple lineare Regression
 
 1.  Die Nutzungsbereitschaft von innovativen Services der
@@ -174,4 +178,4 @@ n(d=0.8; “hoch”)=51.04916
     ## Warning: Removed 256 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
