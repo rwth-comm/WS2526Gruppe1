@@ -48,13 +48,18 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Welch Two Sample t-test
     ## 
     ## data:  df_male$SzOeff and df_female$SzOeff
-    ## t = -0.98714, df = 136.75, p-value = 0.3253
+    ## t = 3.5795, df = 309.42, p-value = 0.0003996
     ## alternative hypothesis: true difference in means is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.4263418  0.1424190
+    ##  0.8693528 2.9919469
     ## sample estimates:
     ## mean of x mean of y 
-    ##  2.995025  3.136986
+    ##  46.11325  44.18260
+
+    ## Warning: Removed 3 rows containing missing values or values outside the scale range
+    ## (`geom_bar()`).
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario B (privatwirtschaftliche Zwecke).
@@ -65,13 +70,15 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Welch Two Sample t-test
     ## 
     ## data:  df_male$SzPriv and df_female$SzPriv
-    ## t = -1.4894, df = 137.95, p-value = 0.1387
+    ## t = -0.65447, df = 312.85, p-value = 0.5133
     ## alternative hypothesis: true difference in means is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.60089937  0.08457687
+    ##  -0.3503573  0.1754579
     ## sample estimates:
     ## mean of x mean of y 
-    ##  3.303483  3.561644
+    ##  3.119658  3.207108
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 1.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
@@ -82,13 +89,13 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Paired t-test
     ## 
     ## data:  df$SzOeff and df$SzPriv
-    ## t = -9.3523, df = 499, p-value < 2.2e-16
+    ## t = 131.96, df = 463, p-value < 2.2e-16
     ## alternative hypothesis: true mean difference is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.4461165 -0.2912168
+    ##  41.11553 42.35861
     ## sample estimates:
     ## mean difference 
-    ##      -0.3686667
+    ##        41.73707
 
 #### Unterschiedshypothese für MANOVA
 
@@ -107,17 +114,17 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$DigLit and df$SzOeff
-    ## t = 1.7904, df = 498, p-value = 0.07399
+    ## t = 0.088812, df = 462, p-value = 0.9293
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.007771312  0.166496730
+    ##  -0.08693273  0.09512800
     ## sample estimates:
-    ##        cor 
-    ## 0.07997378
+    ##         cor 
+    ## 0.004131875
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
@@ -128,17 +135,17 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$DigLit and df$SzPriv
-    ## t = 0.51737, df = 498, p-value = 0.6051
+    ## t = 4.0152, df = 462, p-value = 6.929e-05
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.06464451  0.11064317
+    ##  0.09417119 0.27014507
     ## sample estimates:
-    ##        cor 
-    ## 0.02317746
+    ##       cor 
+    ## 0.1836289
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
@@ -175,7 +182,7 @@ n(d=0.8; “hoch”)=51.04916
 
 ## Histogramm Altersverteilung
 
-    ## Warning: Removed 256 rows containing non-finite outside the scale range
+    ## Warning: Removed 37 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)

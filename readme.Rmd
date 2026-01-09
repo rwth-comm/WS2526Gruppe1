@@ -15,6 +15,7 @@ date: "2025-10-27"
 
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(plotrix)
 library(jmv)
 library(ggplot2)
 library(AachenColorPalette)
@@ -53,17 +54,23 @@ df_female <- filter(df, df$Gender == "Weiblich")
 t.test(df_male$SzOeff, df_female$SzOeff)
 ```
 ```{r, echo = FALSE}
-ggplot(df) +
-  aes(x = Gender, y = SzOeff) +
-  geom_col(fill = "#112446") +
-  labs(
-    x = "Geschlecht",
-    y = "Nutzungsbereitschaft Szenario A (Öffentlich)",
-    title = "Nutzungsbereitschaft Szenario A (Öffentlich) nach Geschlecht",
-    subtitle = " ",
-    caption = " "
-  ) +
-  theme_minimal()
+df %>% 
+  group_by(Gender) %>% 
+  summarise(mean_SzOeff = mean(SzOeff)-1, sem_SzOeff = std.error(SzOeff)) %>%
+  ggplot() +
+  aes(x = Gender, fill = Gender, weight = mean_SzOeff, ymin = mean_SzOeff - sem_SzOeff, ymax = mean_SzOeff + sem_SzOeff ) +
+  geom_bar( width = 0.5) +
+  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  geom_errorbar(width = 0.2) +
+  ylim(0,6) +
+  theme_dark() +
+  labs(title = "Männer glauben eher daran, Technik kontrollieren zu können", 
+       subtitle = "Balkendiagramm: KUT im Vergleich zwischen Männern und Frauen ", 
+       x = "Geschlecht",
+       y = "KUT [0 - 5]",
+       fill = "Geschlecht",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
 
 ```
 
@@ -72,17 +79,23 @@ ggplot(df) +
 t.test(df_male$SzPriv, df_female$SzPriv)
 ```
 ```{r, echo= FALSE}
-ggplot(df) +
-  aes(x = Gender, y = SzPriv) +
-  geom_col(fill = "#112446") +
-  labs(
-    x = "Geschlecht",
-    y = "Nutzungsbereitschaft Szenario B (Privat)",
-    title = "Nutzungsbereitschaft Szenario B (Privat) nach Geschlecht",
-    subtitle = " ",
-    caption = " "
-  ) +
-  theme_minimal()
+df %>% 
+  group_by(Gender) %>% 
+  summarise(mean_SzPriv = mean(SzPriv)-1, sem_SzPriv = std.error(SzPriv)) %>%
+  ggplot() +
+  aes(x = Gender, fill = Gender, weight = mean_SzPriv, ymin = mean_SzPriv - sem_SzPriv, ymax = mean_SzPriv + sem_SzPriv ) +
+  geom_bar( width = 0.5) +
+  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  geom_errorbar(width = 0.2) +
+  ylim(0,6) +
+  theme_dark() +
+  labs(title = "Männer glauben eher daran, Technik kontrollieren zu können", 
+       subtitle = "Balkendiagramm: KUT im Vergleich zwischen Männern und Frauen ", 
+       x = "Geschlecht",
+       y = "KUT [0 - 5]",
+       fill = "Geschlecht",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
 ```
 
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
