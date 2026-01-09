@@ -46,6 +46,33 @@ raw.short$Jobstatus %>% recode(`1` = "In Ausbildung",
                                `8` = "Sonstiges (bitte angeben)")%>% 
   as.factor() -> raw.short$Jobstatus
 
+
+
+raw.short$szOeff_1 %>% recode(`43` = 1, 
+                               `51` = 2, 
+                               `44` = 3, 
+                               `45` = 4, 
+                               `47` = 5, 
+                               `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_1
+
+raw.short$szOeff_2 %>% recode(`43` = 1, 
+                              `51` = 2, 
+                              `44` = 3, 
+                              `45` = 4, 
+                              `47` = 5, 
+                              `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_2
+
+raw.short$szOeff_3 %>% recode(`43` = 1, 
+                              `51` = 2, 
+                              `44` = 3, 
+                              `45` = 4, 
+                              `47` = 5, 
+                              `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_3
+
+
 # Qualitätskontrolle ----
 
 # Skalenwerte berechnen ----
