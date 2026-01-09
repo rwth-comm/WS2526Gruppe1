@@ -64,10 +64,10 @@ df %>%
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
   theme_dark() +
-  labs(title = "Männer glauben eher daran, Technik kontrollieren zu können", 
-       subtitle = "Balkendiagramm: KUT im Vergleich zwischen Männern und Frauen ", 
+  labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario A", 
+       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen", 
        x = "Geschlecht",
-       y = "KUT [0 - 5]",
+       y = "Nutzungsbereitschaft Szenario A (öffentlicher Dienst) [0 - 5]",
        fill = "Geschlecht",
        caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
   NULL
@@ -89,10 +89,10 @@ df %>%
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
   theme_dark() +
-  labs(title = "Männer glauben eher daran, Technik kontrollieren zu können", 
-       subtitle = "Balkendiagramm: KUT im Vergleich zwischen Männern und Frauen ", 
+  labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario B", 
+       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen ", 
        x = "Geschlecht",
-       y = "KUT [0 - 5]",
+       y = "Nutzungsbereitschaft Szenario B (privatwirtschaftlich) [0 - 5]",
        fill = "Geschlecht",
        caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
   NULL
