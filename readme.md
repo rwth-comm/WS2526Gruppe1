@@ -48,16 +48,13 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Welch Two Sample t-test
     ## 
     ## data:  df_male$SzOeff and df_female$SzOeff
-    ## t = 3.5795, df = 309.42, p-value = 0.0003996
+    ## t = 2.7526, df = 342.08, p-value = 0.006228
     ## alternative hypothesis: true difference in means is not equal to 0
     ## 95 percent confidence interval:
-    ##  0.8693528 2.9919469
+    ##  0.09443344 0.56726842
     ## sample estimates:
     ## mean of x mean of y 
-    ##  46.11325  44.18260
-
-    ## Warning: Removed 3 rows containing missing values or values outside the scale range
-    ## (`geom_bar()`).
+    ##  4.091880  3.761029
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
@@ -89,13 +86,40 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Paired t-test
     ## 
     ## data:  df$SzOeff and df$SzPriv
-    ## t = 131.96, df = 463, p-value < 2.2e-16
+    ## t = 13.833, df = 463, p-value < 2.2e-16
     ## alternative hypothesis: true mean difference is not equal to 0
     ## 95 percent confidence interval:
-    ##  41.11553 42.35861
+    ##  0.6237313 0.8302917
     ## sample estimates:
     ## mean difference 
-    ##        41.73707
+    ##       0.7270115
+
+    df_WAP$Szenario %>% 
+      recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
+      as.factor() -> df_WAP$Szenario
+
+    df_WAP%>%
+      group_by(Szenario) %>% 
+      summarise(mean_Nutzungsbereitschaft = mean(Nutzungsbereitschaft), sem_Nutzungsbereitschaft = std.error(Nutzungsbereitschaft)) %>%
+      ggplot() +
+      aes(x = Szenario, y = mean_Nutzungsbereitschaft, weight = mean_Nutzungsbereitschaft, colour = Szenario, ymin = mean_Nutzungsbereitschaft - sem_Nutzungsbereitschaft, ymax = mean_Nutzungsbereitschaft + sem_Nutzungsbereitschaft) +
+      geom_errorbar(width = 0.2, colour = rwthcolor$black) +
+      geom_point(size = 5) +
+      scale_colour_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+      ylim(3,4.1) +
+      theme_gray() +
+      labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
+           subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
+           x = "Szenario",
+           y = "Nutzungsbereitschaft [1 - 6]",
+           fill = "Szenario",
+           caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+      NULL
+
+    ## Ignoring unknown labels:
+    ## • fill : "Szenario"
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 #### Unterschiedshypothese für MANOVA
 
@@ -114,17 +138,17 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$DigLit and df$SzOeff
-    ## t = 0.088812, df = 462, p-value = 0.9293
+    ## t = 5.7053, df = 462, p-value = 2.077e-08
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.08693273  0.09512800
+    ##  0.1694784 0.3396517
     ## sample estimates:
-    ##         cor 
-    ## 0.004131875
+    ##       cor 
+    ## 0.2565522
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
@@ -145,7 +169,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
@@ -185,4 +209,4 @@ n(d=0.8; “hoch”)=51.04916
     ## Warning: Removed 37 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
