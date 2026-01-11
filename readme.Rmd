@@ -15,10 +15,12 @@ date: "2025-10-27"
 
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(plotrix)
 library(jmv)
 library(ggplot2)
 library(AachenColorPalette)
 df <- readRDS("data/data.rds")
+rwthcolor <- hcictools::rwth.colorpalette()
 
 ```
 
@@ -51,16 +53,92 @@ df_male <- filter(df, df$Gender == "Männlich")
 df_female <- filter(df, df$Gender == "Weiblich")
 t.test(df_male$SzOeff, df_female$SzOeff)
 ```
+```{r, echo = FALSE}
+df %>% 
+  group_by(Gender) %>% 
+  summarise(mean_SzOeff = mean(SzOeff)-1, sem_SzOeff = std.error(SzOeff)) %>%
+  ggplot() +
+  aes(x = Gender, fill = Gender, weight = mean_SzOeff, ymin = mean_SzOeff - sem_SzOeff, ymax = mean_SzOeff + sem_SzOeff ) +
+  geom_bar( width = 0.5) +
+  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  geom_errorbar(width = 0.2) +
+  ylim(0,6) +
+  theme_dark() +
+  labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario A", 
+       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen", 
+       x = "Geschlecht",
+       y = "Nutzungsbereitschaft Szenario A (öffentlicher Dienst) [0 - 5]",
+       fill = "Geschlecht",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
+
+```
 
 2. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
 t.test(df_male$SzPriv, df_female$SzPriv)
 ```
-
+```{r, echo= FALSE}
+df %>% 
+  group_by(Gender) %>% 
+  summarise(mean_SzPriv = mean(SzPriv)-1, sem_SzPriv = std.error(SzPriv)) %>%
+  ggplot() +
+  aes(x = Gender, fill = Gender, weight = mean_SzPriv, ymin = mean_SzPriv - sem_SzPriv, ymax = mean_SzPriv + sem_SzPriv ) +
+  geom_bar( width = 0.5) +
+  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  geom_errorbar(width = 0.2) +
+  ylim(0,6) +
+  theme_dark() +
+  labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario B", 
+       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen ", 
+       x = "Geschlecht",
+       y = "Nutzungsbereitschaft Szenario B (privatwirtschaftlich) [0 - 5]",
+       fill = "Geschlecht",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
+```
 
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
 ```{r, echo=FALSE}
 t.test(df$SzOeff, df$SzPriv, paired = TRUE)
+```
+```{r, echo= FALSE}
+library(tidyverse)
+
+df_WAP <- df %>%
+  select(SzOeff, SzPriv) %>%
+  pivot_longer(
+    cols = c(SzOeff, SzPriv),
+    names_to = "Szenario",
+    values_to = "Nutzungsbereitschaft")
+    
+```
+
+```{r}
+df_WAP$Szenario %>% 
+  recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
+  as.factor() -> df_WAP$Szenario
+```
+
+
+```{r}
+df_WAP%>%
+  group_by(Szenario) %>% 
+  summarise(mean_Nutzungsbereitschaft = mean(Nutzungsbereitschaft), sem_Nutzungsbereitschaft = std.error(Nutzungsbereitschaft)) %>%
+  ggplot() +
+  aes(x = Szenario, y = mean_Nutzungsbereitschaft, weight = mean_Nutzungsbereitschaft, colour = Szenario, ymin = mean_Nutzungsbereitschaft - sem_Nutzungsbereitschaft, ymax = mean_Nutzungsbereitschaft + sem_Nutzungsbereitschaft) +
+  geom_errorbar(width = 0.2, colour = rwthcolor$black) +
+  geom_point(size = 5) +
+  scale_colour_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  ylim(3,4.1) +
+  theme_gray() +
+  labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
+       subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
+       x = "Szenario",
+       y = "Nutzungsbereitschaft [1 - 6]",
+       fill = "Szenario",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
 ```
 
 
@@ -74,14 +152,37 @@ t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzOeff)
 ```
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = DigLit, y = SzOeff) +
+    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
+  geom_smooth(method = "lm", color = rwthcolor$lightblue) +
+  labs(x = "Digital Literacy", 
+       y = "Nutzungsbereitschaft für Szenario A (öffentlicher Dienst)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario A (öffentlicher Dienst)", 
+       subtitle = "", 
+       caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
+  theme_minimal()
 
+```
 
 2. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzPriv)
 ```
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = DigLit, y = SzPriv) +
+    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
+  geom_smooth(method = "lm", color = rwthcolor$lightblue) +
+  labs(x = "Digital Literacy", 
+       y = "Nutzungsbereitschaft für Szenario B (private Dienste)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario B (privater Dienst)", 
+       subtitle = "", 
+       caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
+  theme_minimal()
 
-
+```
 
 #### Zusammenhangshypothese für multiple lineare Regression
 1. Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  

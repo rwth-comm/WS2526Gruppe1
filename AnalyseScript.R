@@ -4,18 +4,18 @@ library(psych)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
-raw <- load_qualtrics_csv("data/BeispieldatenWS2526.csv")
+raw <- load_qualtrics_csv("data/echteDaten.csv")
 
 # Rohdaten filtern ----
 raw %>% 
   filter(Progress == 100) %>% 
-  filter(Status == 2) -> raw
+  filter(Status == 0) -> raw
 
 # Überflüssige Variablen entfernen ----
 raw.short <- raw[,c(6,9,19:24,40:45,53:70,92:97,101:102)]
 
 # Variablen umbenennen ----
-generate_codebook(raw.short, "data/BeispieldatenWS2526.csv", "data/codebook.csv")
+generate_codebook(raw.short, "data/echteDaten.csv", "data/codebook.csv")
 codebook <- read_codebook("data/codebook_final.csv")
 names(raw.short) <- codebook$variable
 
@@ -45,6 +45,33 @@ raw.short$Jobstatus %>% recode(`1` = "In Ausbildung",
                                `7` = "Hausmann/-frau",
                                `8` = "Sonstiges (bitte angeben)")%>% 
   as.factor() -> raw.short$Jobstatus
+
+
+
+raw.short$szOeff_1 %>% recode(`43` = 1, 
+                               `51` = 2, 
+                               `44` = 3, 
+                               `45` = 4, 
+                               `47` = 5, 
+                               `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_1
+
+raw.short$szOeff_2 %>% recode(`43` = 1, 
+                              `51` = 2, 
+                              `44` = 3, 
+                              `45` = 4, 
+                              `47` = 5, 
+                              `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_2
+
+raw.short$szOeff_3 %>% recode(`43` = 1, 
+                              `51` = 2, 
+                              `44` = 3, 
+                              `45` = 4, 
+                              `47` = 5, 
+                              `48` = 6) %>% 
+  as.numeric() -> raw.short$szOeff_3
+
 
 # Qualitätskontrolle ----
 

@@ -41,6 +41,4 @@ szPriv_1;Q22_1;Ich beabsichtige, die beschriebene KI zu nutzen;Stellen Sie sich 
 szPriv_2;Q22_2;Ich kann mit gut vorstellen, das beschriebene KI-System einzusetzen;Stellen Sie sich vor, die Daten aus Ihrem Vorgang werden ausschließlich von privatwirtschaftlichen IT-Stellen zum KI-Modelltraining genutzt. Würden Sie die beschriebene KI in diesem Fall nutzen? - Ich kann mit gut vorstellen, das beschriebene KI-System einzusetzen;"{""ImportId"":""QID22_2""}"
 szPriv_3;Q22_3;Ich würde das System in Zukunft gern nutzen;Stellen Sie sich vor, die Daten aus Ihrem Vorgang werden ausschließlich von privatwirtschaftlichen IT-Stellen zum KI-Modelltraining genutzt. Würden Sie die beschriebene KI in diesem Fall nutzen? - Ich würde das System in Zukunft gern nutzen;"{""ImportId"":""QID22_3""}"
 Abschluss;Abschluss;NA;Zum Abschluss: Den Einsatz von KI für digitale Services der Kommunalverwaltung finde ich gut.;"{""ImportId"":""QID39""}"
-feed;Q30;NA;"Vielen Dank für Ihre Teilnahme an der Umfrage!
-
-Falls Sie noch abschließende Anmerkungen haben, können Sie diese gern hier eintragen:";"{""ImportId"":""QID30_TEXT""}"
+;;;;
