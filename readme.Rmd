@@ -54,7 +54,12 @@ df_female <- filter(df, df$Gender == "Weiblich")
 t.test(df_male$SzOeff, df_female$SzOeff)
 ```
 ```{r, echo = FALSE}
+
+#Feedback JRH: Hier sollten die NAs bei Gender noch ausgefiltert werden. Ich war so frei Ihnen den Code dafür einzutragen, sie müssen die Zeilen nur auskommentieren. Falls Sie die Zeilen nicht verstehen bitte nachfragen. 
+
 df %>% 
+  #filter(!is.na(Gender)) %>% 
+  #droplevels() %>% 
   group_by(Gender) %>% 
   summarise(mean_SzOeff = mean(SzOeff)-1, sem_SzOeff = std.error(SzOeff)) %>%
   ggplot() +
@@ -79,6 +84,9 @@ df %>%
 t.test(df_male$SzPriv, df_female$SzPriv)
 ```
 ```{r, echo= FALSE}
+
+#Feedback JRH: Hier bitte analog zum vorhigen Diagramm verfahren. 
+
 df %>% 
   group_by(Gender) %>% 
   summarise(mean_SzPriv = mean(SzPriv)-1, sem_SzPriv = std.error(SzPriv)) %>%
@@ -105,6 +113,8 @@ t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```{r, echo= FALSE}
 library(tidyverse)
 
+#Feedback JRH: Sehr elegante Lösung. 
+
 df_WAP <- df %>%
   select(SzOeff, SzPriv) %>%
   pivot_longer(
@@ -115,6 +125,8 @@ df_WAP <- df %>%
 ```
 
 ```{r}
+#Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. 
+
 df_WAP$Szenario %>% 
   recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
   as.factor() -> df_WAP$Szenario
@@ -122,6 +134,9 @@ df_WAP$Szenario %>%
 
 
 ```{r}
+
+#Feedback JRH: Diagramm prinzipiell super, ich würde aber für den Vortrag Balken- und Punktdiagramm nicht abwechseln. 
+
 df_WAP%>%
   group_by(Szenario) %>% 
   summarise(mean_Nutzungsbereitschaft = mean(Nutzungsbereitschaft), sem_Nutzungsbereitschaft = std.error(Nutzungsbereitschaft)) %>%

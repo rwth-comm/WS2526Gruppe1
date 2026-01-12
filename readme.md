@@ -94,9 +94,13 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean difference 
     ##       0.7270115
 
+    #Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. 
+
     df_WAP$Szenario %>% 
       recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
       as.factor() -> df_WAP$Szenario
+
+    #Feedback JRH: Diagramm prinzipiell super, ich würde aber für den Vortrag Balken- und Punktdiagramm nicht abwechseln. 
 
     df_WAP%>%
       group_by(Szenario) %>% 
