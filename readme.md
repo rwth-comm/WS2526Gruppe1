@@ -94,7 +94,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean difference 
     ##       0.7270115
 
-    #Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. 
+    #Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. Und definitiv echo = FALSE sonst wird der Code mit abgedruckt. 
 
     df_WAP$Szenario %>% 
       recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
