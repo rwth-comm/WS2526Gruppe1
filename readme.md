@@ -94,32 +94,6 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean difference 
     ##       0.7270115
 
-    #Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. Und definitiv echo = FALSE sonst wird der Code mit abgedruckt. 
-
-    df_WAP$Szenario %>% 
-      recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
-      as.factor() -> df_WAP$Szenario
-
-    #Feedback JRH: Diagramm prinzipiell super, ich würde aber für den Vortrag Balken- und Punktdiagramm nicht abwechseln. 
-
-    df_WAP%>%
-      group_by(Szenario) %>% 
-      summarise(mean_Nutzungsbereitschaft = mean(Nutzungsbereitschaft), sem_Nutzungsbereitschaft = std.error(Nutzungsbereitschaft)) %>%
-      ggplot() +
-      aes(x = Szenario, y = mean_Nutzungsbereitschaft, weight = mean_Nutzungsbereitschaft, colour = Szenario, ymin = mean_Nutzungsbereitschaft - sem_Nutzungsbereitschaft, ymax = mean_Nutzungsbereitschaft + sem_Nutzungsbereitschaft) +
-      geom_errorbar(width = 0.2, colour = rwthcolor$black) +
-      geom_point(size = 5) +
-      scale_colour_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
-      ylim(3,4.1) +
-      theme_gray() +
-      labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
-           subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
-           x = "Szenario",
-           y = "Nutzungsbereitschaft [1 - 6]",
-           fill = "Szenario",
-           caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
-      NULL
-
     ## Ignoring unknown labels:
     ## • fill : "Szenario"
 
