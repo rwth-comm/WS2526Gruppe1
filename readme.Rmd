@@ -165,12 +165,16 @@ df_WAP%>%
 
 ```{r, echo = FALSE}
  
-df %>% 
-  filter(Urban == "1" | Urban == "2" | Urban== "3") %>% 
-  droplevels() -> df
+df_HA <- df %>% 
+  filter(Urban == "1" | Urban == "2" | Urban == "3") %>%
+  droplevels() 
 
-manova(df, deps = c(SzOeff,SzPriv), factors = c(Urban), multivar = "wilks")
 
+jmv::mancova(
+  df_HA, deps = c("SzOeff","SzPriv"), 
+  factors = c("1","2","3"), 
+  multivar = "wilks"
+  )
 
 ```
 
