@@ -165,18 +165,20 @@ df_WAP%>%
 
 ```{r, echo = FALSE}
  
-df_HA <- df %>% 
-  filter(Urban == "1" | Urban == "2" | Urban == "3") %>%
-  droplevels() 
-
+df_HA <- df %>%
+  filter(Urban %in% c("1","2","3")) %>%
+  mutate(Urban = factor(Urban, levels = c("1","2","3"))) %>%
+  droplevels()
 
 jmv::mancova(
-  df_HA, deps = c("SzOeff","SzPriv"), 
-  factors = c("1","2","3"), 
+  data    = df_HA,
+  deps    = c("SzOeff", "SzPriv"),
+  factors = "Urban",
   multivar = "wilks"
-  )
+)
 
 ```
+
 
 ### Zusammenhangshypothesen
 1. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
