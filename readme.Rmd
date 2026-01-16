@@ -166,7 +166,6 @@ df_WAP%>%
 ```{r, echo = FALSE}
  
 df_HA <- df %>%
-  filter(Urban %in% c("1","2","3")) %>%
   mutate(Urban = factor(Urban, levels = c("1","2","3"))) %>%
   droplevels()
 

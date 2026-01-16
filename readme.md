@@ -105,6 +105,29 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und
     Szenario B (privatwirtschaftliche Zwecke).
 
+<!-- -->
+
+    ## 
+    ##  MANCOVA
+    ## 
+    ##  Multivariate Tests                                                             
+    ##  ────────────────────────────────────────────────────────────────────────────── 
+    ##                              value        F           df1    df2    p           
+    ##  ────────────────────────────────────────────────────────────────────────────── 
+    ##    Urban    Wilks' Lambda    0.9771934    2.459652      4    848    0.0440538   
+    ##  ────────────────────────────────────────────────────────────────────────────── 
+    ## 
+    ## 
+    ##  Univariate Tests                                                                                      
+    ##  ───────────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##                 Dependent Variable    Sum of Squares    df     Mean Square    F            p           
+    ##  ───────────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##    Urban        SzOeff                     0.4253409      2      0.2126704    0.1402479    0.8691830   
+    ##                 SzPriv                     8.5962508      2      4.2981254    2.5002969    0.0832671   
+    ##    Residuals    SzOeff                   644.4656249    425      1.5163897                             
+    ##                 SzPriv                   730.5945591    425      1.7190460                             
+    ##  ─────────────────────────────────────────────────────────────────────────────────────────────────────
+
 ### Zusammenhangshypothesen
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
@@ -126,7 +149,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
@@ -147,7 +170,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
@@ -157,6 +180,20 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 2.  Die Nutzungsbereitschaft von innovativen Services der
     Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist
     abhängig von Privacy-Einstellungen und Alter.
+
+service comment (nur so 90 % garantie auf richtigkeit): adjusted R^2
+stellt dar, wie viel Prozent der Varianz der abhängigen Variable (den
+Variablen) durch die unabhängige Variable erklärt wird. Diese
+Betrachtung geht über den Mittelwertsvergleich hinaus. Bsp.: die Varianz
+der Nutzungsbereitschaft wird zu x % von Privacy-EInstellungen erklärt.
+Das wird durch das “Estimate” berechnet. Sollen Variablen verglichen
+werden, müssen die Estimates bereinigt werden (da bspw. Alter immer
+höhere Werte hat als eine Skala), betrachtet man die “standadisierten
+Estimates”. aus mehreren Variablen setzen sich Modelle zusammen. Das
+beste Modell hat die wenigsten Variablen und das größte stand. Estimate.
+Wir machen basically ein lineares Gleichungssystem mit den Variablen, um
+das Intercept zu berechnen. Das funktioniert nicht perfekt, daher kommt
+der Fehlerterm zustande.
 
 ## Operationalisierung
 
@@ -187,4 +224,4 @@ n(d=0.8; “hoch”)=51.04916
     ## Warning: Removed 37 rows containing non-finite outside the scale range
     ## (`stat_bin()`).
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-15-1.png)
