@@ -1,6 +1,9 @@
 # Pakete aktivieren ----
+#install.packages("careless")
 library(tidyverse)
 library(psych)
+library(hcictools)
+library(careless)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
@@ -8,6 +11,7 @@ raw <- load_qualtrics_csv("data/echteDaten.csv")
 
 # Rohdaten filtern ----
 raw %>% 
+  filter(DSGVO == 1) %>% 
   filter(Progress == 100) %>% 
   filter(Status == 0) -> raw
 
@@ -74,7 +78,15 @@ raw.short$szOeff_3 %>% recode(`43` = 1,
 
 
 # Qualitätskontrolle ----
+raw.short.quali <- careless_indices(raw.short[,c(-40)], c(9:38), speeder_analysis = "median/2")
 
+raw.short.quali %>%
+  filter(speeder_flag == FALSE) %>%
+  filter(careless_psychsyn > 0) %>%
+  #filter(careless_psychant < 0) %>%
+  filter(careless_mahadflag == FALSE) -> raw.short.quali
+
+# wir müssen ab hier nochmal alles mit dem quali datensatz laufen lassen
 # Skalenwerte berechnen ----
 
 schluesselliste <- list(
@@ -106,3 +118,4 @@ pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d =0.5, power = 0.8)
 63.76561*2
 pwr::pwr.t.test(n = NULL, sig.level = 0.05 , d =0.8, power = 0.8)
 25.52458*2
+
