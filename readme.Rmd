@@ -42,6 +42,42 @@ rwthcolor <- hcictools::rwth.colorpalette()
   
 Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beeinflussen, wurden herausgekürzt. Dies umfasst hauptsächlich kooperative und generative Szenarien, die wir im Anwendungsfall nicht antizipieren. Die Skala wurde von 25 Items auf 17 Items gekürzt. Es wurde darauf geachtet, dass die Subskalen genug Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
+## Demografie
+### Histogramm Altersverteilung
+
+```{r, echo=FALSE}
+
+ggplot(df) +
+  aes(x = Age) +
+  geom_histogram(bins = 30L, fill = aachen_color("purple75")) +
+  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
+  geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
+  labs(x = "Alter in Jahren", 
+       y = "Anzahl", 
+       title = paste0("Altersverteiliung n = (", nrow(df), ")"), 
+       subtitle = "Histogramm der Altersverteilung", 
+       caption = "30 Bins") +
+  theme_minimal()
+
+
+```
+
+### Geschlecht
+```{r, echo = False}
+jmv::descriptives(df, vars = "Gender", freq = TRUE)
+```
+
+### Bildung
+```{r, echo = False}
+jmv::descriptives(df, vars = "Edu", freq = TRUE)
+```
+
+### Wohnort
+```{r, echo = False}
+df$urban2 <- as.factor(df$Urban)
+jmv::descriptives(df, vars = "urban2", freq = TRUE)
+```
+
 
 ## Hypothesen
 
@@ -55,8 +91,6 @@ t.test(df_male$SzOeff, df_female$SzOeff)
 ```
 ```{r, echo = FALSE}
 
-#Feedback JRH: Hier sollten die NAs bei Gender noch ausgefiltert werden. Ich war so frei Ihnen den Code dafür einzutragen, sie müssen die Zeilen nur auskommentieren. Falls Sie die Zeilen nicht verstehen bitte nachfragen. 
-
 df %>% 
   filter(!is.na(Gender)) %>% 
   droplevels() %>% 
@@ -68,7 +102,7 @@ df %>%
   scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
-  theme_dark() +
+  theme_minimal() +
   labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario A", 
        subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen", 
        x = "Geschlecht",
@@ -85,8 +119,6 @@ t.test(df_male$SzPriv, df_female$SzPriv)
 ```
 ```{r, echo= FALSE}
 
-#Feedback JRH: Hier bitte analog zum vorhigen Diagramm verfahren. 
-
 df %>%
   filter(!is.na(Gender)) %>% 
   droplevels() %>%
@@ -94,11 +126,11 @@ df %>%
   summarise(mean_SzPriv = mean(SzPriv)-1, sem_SzPriv = std.error(SzPriv)) %>%
   ggplot() +
   aes(x = Gender, fill = Gender, weight = mean_SzPriv, ymin = mean_SzPriv - sem_SzPriv, ymax = mean_SzPriv + sem_SzPriv ) +
-  geom_bar( width = 0.5) +
+  geom_bar(width = 0.5) +
   scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
-  theme_dark() +
+  theme_minimal() +
   labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario B", 
        subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen ", 
        x = "Geschlecht",
@@ -115,27 +147,16 @@ t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```{r, echo= FALSE}
 library(tidyverse)
 
-#Feedback JRH: Sehr elegante Lösung. 
-
 df_WAP <- df %>%
   select(SzOeff, SzPriv) %>%
   pivot_longer(
     cols = c(SzOeff, SzPriv),
     names_to = "Szenario",
     values_to = "Nutzungsbereitschaft")
-    
-```
-
-```{r, echo= FALSE}
-#Feedback JRH: Ich würde das hier und das Diagramm in einen gemeinsamen Chunk schreiben. Und definitiv echo = FALSE sonst wird der Code mit abgedruckt. 
 
 df_WAP$Szenario %>% 
   recode(`1` = "SzOeff", `2` = "SzPriv") %>% 
   as.factor() -> df_WAP$Szenario
-```
-
-
-```{r, echo= FALSE}
 
 #Feedback JRH: Diagramm prinzipiell super, ich würde aber für den Vortrag Balken- und Punktdiagramm nicht abwechseln. 
 
@@ -143,12 +164,12 @@ df_WAP%>%
   group_by(Szenario) %>% 
   summarise(mean_Nutzungsbereitschaft = mean(Nutzungsbereitschaft), sem_Nutzungsbereitschaft = std.error(Nutzungsbereitschaft)) %>%
   ggplot() +
-  aes(x = Szenario, y = mean_Nutzungsbereitschaft, weight = mean_Nutzungsbereitschaft, colour = Szenario, ymin = mean_Nutzungsbereitschaft - sem_Nutzungsbereitschaft, ymax = mean_Nutzungsbereitschaft + sem_Nutzungsbereitschaft) +
-  geom_errorbar(width = 0.2, colour = rwthcolor$black) +
-  geom_point(size = 5) +
-  scale_colour_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
-  ylim(3,4.1) +
-  theme_gray() +
+  aes(x = Szenario, weight = (mean_Nutzungsbereitschaft - 1), fill = Szenario, ymin = (mean_Nutzungsbereitschaft -1) - sem_Nutzungsbereitschaft, ymax = (mean_Nutzungsbereitschaft -1) + sem_Nutzungsbereitschaft) +
+   geom_bar(width = 0.5) +
+  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red))+ 
+  ylim(0, 5) +
+   geom_errorbar(width = 0.2, colour = rwthcolor$black) +
+  theme_minimal() +
   labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
        subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
        x = "Szenario",
@@ -256,25 +277,6 @@ n(d=0.2; "schwach")=786.8114
 n(d=0.5; "mittel")=127.5312  
 n(d=0.8; "hoch")=51.04916  
 
-## Histogramm Altersverteilung
-
-
-```{r, echo=FALSE}
-
-ggplot(df) +
-  aes(x = Age) +
-  geom_histogram(bins = 30L, fill = aachen_color("purple75")) +
-  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
-  geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
-  labs(x = "Alter in Jahren", 
-       y = "Anzahl", 
-       title = paste0("Altersverteiliung n = (", nrow(df), ")"), 
-       subtitle = "Histogramm der Altersverteilung", 
-       caption = "30 Bins") +
-  theme_minimal()
-
-
-```
 
 ## Descriptives
 ```{r descriptive, echo=FALSE}
