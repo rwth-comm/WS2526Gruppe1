@@ -13,7 +13,7 @@ Services der Kommunalverwaltung bei Weitergabe der Daten an private oder
 ## Faktorenraum
 
 <figure>
-<img src="FaktorenraumNeu.jpg" alt="Faktorenraum" />
+<img src="FaktorenraumNeu.JPG" alt="Faktorenraum" />
 <figcaption aria-hidden="true">Faktorenraum</figcaption>
 </figure>
 
