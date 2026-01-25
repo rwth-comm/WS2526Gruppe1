@@ -40,7 +40,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
-### Deskriptive Statistiken
+### Demografische Daten
 
     df$urban2 <- as.factor(df$Urban)
     jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)

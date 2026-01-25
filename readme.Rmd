@@ -61,7 +61,7 @@ ggplot(df) +
 
 ```
 
-### Deskriptive Statistiken
+### Demografische Daten
 ```{r}
 df$urban2 <- as.factor(df$Urban)
 jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
@@ -70,7 +70,7 @@ jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
 ## Hypothesen
 
 ### Unterschiedshypothesen
-1. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
+1) Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 
 ```{r, echo = FALSE}
 df_male <- filter(df, df$Gender == "Männlich")
@@ -101,7 +101,7 @@ df %>%
 
 ```
 
-2. Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
+2) Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
 t.test(df_male$SzPriv, df_female$SzPriv)
 ```
@@ -128,7 +128,7 @@ df %>%
   NULL
 ```
 
-3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
+3) Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
 ```{r, echo = FALSE}
 t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```
@@ -170,7 +170,7 @@ df_WAP%>%
 
 
 #### Unterschiedshypothese für MANOVA
-1. LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und Szenario B (privatwirtschaftliche Zwecke).
+1) LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und Szenario B (privatwirtschaftliche Zwecke).
 
 ```{r, echo = FALSE}
  
@@ -189,7 +189,7 @@ jmv::mancova(
 
 
 ### Zusammenhangshypothesen
-1. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
+1) Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzOeff)
 ```
@@ -207,7 +207,7 @@ ggplot(df) +
 
 ```
 
-2. Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
+2) Es gibt einen Zusammenhang zwischen Digital Literacy und  Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 ```{r, echo = FALSE}
 cor.test(df$DigLit, df$SzPriv)
 ```
@@ -226,7 +226,7 @@ ggplot(df) +
 ```
 
 #### Zusammenhangshypothese für multiple lineare Regression
-1. Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  
+1) Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  
  
 
 
@@ -237,7 +237,7 @@ jmv::linReg(data = df,
             blocks = c("Priv", "Age"),
             r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
 ```
-2. Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist abhängig von Privacy-Einstellungen und Alter. 
+2) Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist abhängig von Privacy-Einstellungen und Alter. 
 ```{r, echo = FALSE}
 jmv::linReg(data = df, 
             dep = c("SzOeff"), 
