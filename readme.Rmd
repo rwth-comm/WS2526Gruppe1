@@ -4,10 +4,10 @@ output: md_document
 date: "2025-10-27"
 ---
 
-* Annika
-* Maike
 * Anastasiya
-* Henrik 
+* Annika
+* Henrik
+* Maike
 * Marie 
 
 ```{r, include=FALSE}
@@ -48,7 +48,7 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 
 ggplot(df) +
   aes(x = Age) +
-  geom_histogram(bins = 30L, fill = aachen_color("purple75")) +
+  geom_histogram(bins = 30L, fill = "#0C0A9E") +
   geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
   geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
   labs(x = "Alter in Jahren", 
@@ -87,7 +87,7 @@ df %>%
   ggplot() +
   aes(x = Gender, fill = Gender, weight = mean_SzOeff, ymin = mean_SzOeff - sem_SzOeff, ymax = mean_SzOeff + sem_SzOeff ) +
   geom_bar( width = 0.5) +
-  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  scale_fill_manual(values=c("#0C0A9E", "#BFBEF7")) + 
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
   theme_minimal() +
@@ -115,7 +115,7 @@ df %>%
   ggplot() +
   aes(x = Gender, fill = Gender, weight = mean_SzPriv, ymin = mean_SzPriv - sem_SzPriv, ymax = mean_SzPriv + sem_SzPriv ) +
   geom_bar(width = 0.5) +
-  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red)) + 
+  scale_fill_manual(values=c("#0C0A9E", "#BFBEF7")) + 
   geom_errorbar(width = 0.2) +
   ylim(0,6) +
   theme_minimal() +
@@ -154,7 +154,7 @@ df_WAP%>%
   ggplot() +
   aes(x = Szenario, weight = (mean_Nutzungsbereitschaft - 1), fill = Szenario, ymin = (mean_Nutzungsbereitschaft -1) - sem_Nutzungsbereitschaft, ymax = (mean_Nutzungsbereitschaft -1) + sem_Nutzungsbereitschaft) +
    geom_bar(width = 0.5) +
-  scale_fill_manual(values=c(rwthcolor$lightblue, rwthcolor$red))+ 
+  scale_fill_manual(values=c("#0C0A9E", "#BFBEF7"))+ 
   ylim(0, 5) +
    geom_errorbar(width = 0.2, colour = rwthcolor$black) +
   theme_minimal() +
@@ -196,8 +196,8 @@ cor.test(df$DigLit, df$SzOeff)
 ```{r, echo = FALSE}
 ggplot(df) +
   aes(x = DigLit, y = SzOeff) +
-    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
-  geom_smooth(method = "lm", color = rwthcolor$lightblue) +
+    geom_jitter(shape = "circle", size = 1.5, colour = "#0C0A9E", width = 0.2, height = 0.2, alpha = 0.5) +
+  geom_smooth(method = "lm", color = "#BFBEF7") +
   labs(x = "Digital Literacy", 
        y = "Nutzungsbereitschaft für Szenario A (öffentlicher Dienst)", 
        title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario A (öffentlicher Dienst)", 
@@ -214,8 +214,8 @@ cor.test(df$DigLit, df$SzPriv)
 ```{r, echo = FALSE}
 ggplot(df) +
   aes(x = DigLit, y = SzPriv) +
-    geom_jitter(shape = "circle", size = 1.5, colour = rwthcolor$turquois, width = 0.2, height = 0.2, alpha = 0.5) +
-  geom_smooth(method = "lm", color = rwthcolor$lightblue) +
+    geom_jitter(shape = "circle", size = 1.5, colour = "#0C0A9E", width = 0.2, height = 0.2, alpha = 0.5) +
+  geom_smooth(method = "lm", color = "#BFBEF7") +
   labs(x = "Digital Literacy", 
        y = "Nutzungsbereitschaft für Szenario B (private Dienste)", 
        title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario B (privater Dienst)", 

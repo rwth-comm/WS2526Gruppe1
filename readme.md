@@ -1,7 +1,7 @@
--   Annika
--   Maike
 -   Anastasiya
+-   Annika
 -   Henrik
+-   Maike
 -   Marie
 
 ## Forschungsfrage
