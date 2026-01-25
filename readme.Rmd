@@ -61,6 +61,11 @@ ggplot(df) +
 
 ```
 
+### Deskriptive Statistiken
+```{r}
+jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "Urban"), freq = TRUE)
+```
+
 ### Geschlecht
 ```{r, echo = FALSE}
 jmv::descriptives(df, vars = "Gender", freq = TRUE)
