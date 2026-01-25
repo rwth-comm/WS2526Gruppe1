@@ -13,8 +13,8 @@ Services der Kommunalverwaltung bei Weitergabe der Daten an private oder
 ## Faktorenraum
 
 <figure>
-<img src="Faktorenraum%20Neu.jpg" alt="Faktorenraum" />
-<figcaption aria-hidden="true">Faktorenraum</figcaption>
+<img src="Faktorenraum%20Neu.jpg" alt="Faktorenraum Neu" />
+<figcaption aria-hidden="true">Faktorenraum Neu</figcaption>
 </figure>
 
 ## Validierte Messinstrumente

@@ -29,7 +29,7 @@ rwthcolor <- hcictools::rwth.colorpalette()
 
 ## Faktorenraum
 
-![Faktorenraum](Faktorenraum Neu.jpg)
+![Faktorenraum Neu](Faktorenraum Neu.jpg)
 
 
 ## Validierte Messinstrumente
