@@ -98,10 +98,8 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ### Unterschiedshypothesen
 
-1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
-    Szenario A (öffentlicher Dienst).
-
-<!-- -->
+**H1:** Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft
+in Szenario A (öffentlicher Dienst).
 
     ## 
     ##  Welch Two Sample t-test

@@ -70,7 +70,7 @@ jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
 ## Hypothesen
 
 ### Unterschiedshypothesen
-1) Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
+**H1:** Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 
 ```{r, echo = FALSE}
 df_male <- filter(df, df$Gender == "Männlich")
