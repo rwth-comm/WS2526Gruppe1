@@ -42,23 +42,24 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ### Deskriptive Statistiken
 
-    jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "Urban"), freq = TRUE)
+    df$urban2 <- as.factor(df$Urban)
+    jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
 
     ## 
     ##  DESCRIPTIVES
     ## 
-    ##  Descriptives                                                     
-    ##  ──────────────────────────────────────────────────────────────── 
-    ##                          Gender    Age         Edu    Urban       
-    ##  ──────────────────────────────────────────────────────────────── 
-    ##    N                        422         421    422          422   
-    ##    Missing                    0           1      0            0   
-    ##    Mean                            34.53919            2.289100   
-    ##    Median                          26.00000            2.000000   
-    ##    Standard deviation              15.79154           0.7747957   
-    ##    Minimum                         18.00000            1.000000   
-    ##    Maximum                         89.00000            3.000000   
-    ##  ──────────────────────────────────────────────────────────────── 
+    ##  Descriptives                                                  
+    ##  ───────────────────────────────────────────────────────────── 
+    ##                          Gender    Age         Edu    urban2   
+    ##  ───────────────────────────────────────────────────────────── 
+    ##    N                        422         421    422       422   
+    ##    Missing                    0           1      0         0   
+    ##    Mean                            34.53919                    
+    ##    Median                          26.00000                    
+    ##    Standard deviation              15.79154                    
+    ##    Minimum                         18.00000                    
+    ##    Maximum                         89.00000                    
+    ##  ───────────────────────────────────────────────────────────── 
     ## 
     ## 
     ##  FREQUENCIES
@@ -81,89 +82,8 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##    Realschulabschluss                52      12.32227        15.16588   
     ##    Abitur                           141      33.41232        48.57820   
     ##    Hochschulabschluss               217      51.42180       100.00000   
-    ##  ──────────────────────────────────────────────────────────────────────
-
-### Geschlecht
-
-    ## 
-    ##  DESCRIPTIVES
-    ## 
-    ##  Descriptives                     
-    ##  ──────────────────────────────── 
-    ##                          Gender   
-    ##  ──────────────────────────────── 
-    ##    N                        422   
-    ##    Missing                    0   
-    ##    Mean                           
-    ##    Median                         
-    ##    Standard deviation             
-    ##    Minimum                        
-    ##    Maximum                        
-    ##  ──────────────────────────────── 
-    ## 
-    ## 
-    ##  FREQUENCIES
-    ## 
-    ##  Frequencies of Gender                                
-    ##  ──────────────────────────────────────────────────── 
-    ##    Gender      Counts    % of Total    Cumulative %   
-    ##  ──────────────────────────────────────────────────── 
-    ##    Männlich       153      36.25592        36.25592   
-    ##    Weiblich       269      63.74408       100.00000   
-    ##  ────────────────────────────────────────────────────
-
-### Bildung
-
-    ## 
-    ##  DESCRIPTIVES
-    ## 
-    ##  Descriptives                  
-    ##  ───────────────────────────── 
-    ##                          Edu   
-    ##  ───────────────────────────── 
-    ##    N                     422   
-    ##    Missing                 0   
-    ##    Mean                        
-    ##    Median                      
-    ##    Standard deviation          
-    ##    Minimum                     
-    ##    Maximum                     
-    ##  ───────────────────────────── 
-    ## 
-    ## 
-    ##  FREQUENCIES
-    ## 
-    ##  Frequencies of Edu                                                     
     ##  ────────────────────────────────────────────────────────────────────── 
-    ##    Edu                           Counts    % of Total    Cumulative %   
-    ##  ────────────────────────────────────────────────────────────────────── 
-    ##    (noch) kein Schulabschluss         2       0.47393         0.47393   
-    ##    Hauptschulabschluss               10       2.36967         2.84360   
-    ##    Realschulabschluss                52      12.32227        15.16588   
-    ##    Abitur                           141      33.41232        48.57820   
-    ##    Hochschulabschluss               217      51.42180       100.00000   
-    ##  ──────────────────────────────────────────────────────────────────────
-
-### Wohnort
-
     ## 
-    ##  DESCRIPTIVES
-    ## 
-    ##  Descriptives                     
-    ##  ──────────────────────────────── 
-    ##                          urban2   
-    ##  ──────────────────────────────── 
-    ##    N                        422   
-    ##    Missing                    0   
-    ##    Mean                           
-    ##    Median                         
-    ##    Standard deviation             
-    ##    Minimum                        
-    ##    Maximum                        
-    ##  ──────────────────────────────── 
-    ## 
-    ## 
-    ##  FREQUENCIES
     ## 
     ##  Frequencies of urban2                              
     ##  ────────────────────────────────────────────────── 
@@ -195,7 +115,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean of x mean of y 
     ##  4.102397  3.769517
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
     Szenario B (privatwirtschaftliche Zwecke).
@@ -214,7 +134,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean of x mean of y 
     ##  3.148148  3.206939
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 1.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
     höher, als bei Szenario B (privatwirtschaftliche Zwecke).
@@ -233,7 +153,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ## mean difference 
     ##       0.7045814
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 #### Unterschiedshypothese für MANOVA
 
@@ -285,7 +205,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-15-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
     Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
@@ -306,7 +226,7 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 #### Zusammenhangshypothese für multiple lineare Regression
 

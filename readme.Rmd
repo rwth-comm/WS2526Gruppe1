@@ -63,25 +63,9 @@ ggplot(df) +
 
 ### Deskriptive Statistiken
 ```{r}
-jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "Urban"), freq = TRUE)
-```
-
-### Geschlecht
-```{r, echo = FALSE}
-jmv::descriptives(df, vars = "Gender", freq = TRUE)
-```
-
-### Bildung
-```{r, echo = FALSE}
-jmv::descriptives(df, vars = "Edu", freq = TRUE)
-```
-
-### Wohnort
-```{r, echo = FALSE}
 df$urban2 <- as.factor(df$Urban)
-jmv::descriptives(df, vars = "urban2", freq = TRUE)
+jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
 ```
-
 
 ## Hypothesen
 
