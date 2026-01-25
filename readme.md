@@ -115,10 +115,8 @@ in Szenario A (öffentlicher Dienst).
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
-1.  Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft in
-    Szenario B (privatwirtschaftliche Zwecke).
-
-<!-- -->
+**H2:** Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft
+in Szenario B (privatwirtschaftliche Zwecke).
 
     ## 
     ##  Welch Two Sample t-test
@@ -134,10 +132,8 @@ in Szenario A (öffentlicher Dienst).
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
-1.  Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst)
-    höher, als bei Szenario B (privatwirtschaftliche Zwecke).
-
-<!-- -->
+**H3:** Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher
+Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
     ## 
     ##  Paired t-test
@@ -155,11 +151,9 @@ in Szenario A (öffentlicher Dienst).
 
 #### Unterschiedshypothese für MANOVA
 
-1.  LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in der
-    Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und
-    Szenario B (privatwirtschaftliche Zwecke).
-
-<!-- -->
+**H1:** LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in
+der Nutzungsbereitschaft in Szenario A (öffentlicher Dienst) und
+Szenario B (privatwirtschaftliche Zwecke).
 
     ## 
     ##  MANCOVA
@@ -184,10 +178,8 @@ in Szenario A (öffentlicher Dienst).
 
 ### Zusammenhangshypothesen
 
-1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
-    Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
-
-<!-- -->
+**H1:** Es gibt einen Zusammenhang zwischen Digital Literacy und
+Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 
     ## 
     ##  Pearson's product-moment correlation
@@ -205,10 +197,8 @@ in Szenario A (öffentlicher Dienst).
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
-1.  Es gibt einen Zusammenhang zwischen Digital Literacy und
-    Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
-
-<!-- -->
+**H2:** Es gibt einen Zusammenhang zwischen Digital Literacy und
+Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 
     ## 
     ##  Pearson's product-moment correlation
@@ -228,11 +218,9 @@ in Szenario A (öffentlicher Dienst).
 
 #### Zusammenhangshypothese für multiple lineare Regression
 
-1.  Die Nutzungsbereitschaft von innovativen Services der
-    Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist
-    abhängig von Privacy-Einstellungen und Alter.
-
-<!-- -->
+**H1:** Die Nutzungsbereitschaft von innovativen Services der
+Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist
+abhängig von Privacy-Einstellungen und Alter.
 
     ## 
     ##  LINEAR REGRESSION
@@ -279,11 +267,9 @@ in Szenario A (öffentlicher Dienst).
     ##    Age          -0.004820904    0.003899726    -1.236216     0.2170725        -0.05800612   
     ##  ──────────────────────────────────────────────────────────────────────────────────────────
 
-1.  Die Nutzungsbereitschaft von innovativen Services der
-    Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist
-    abhängig von Privacy-Einstellungen und Alter.
-
-<!-- -->
+**H2:** Die Nutzungsbereitschaft von innovativen Services der
+Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist
+abhängig von Privacy-Einstellungen und Alter.
 
     ## 
     ##  LINEAR REGRESSION
