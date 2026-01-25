@@ -62,17 +62,17 @@ ggplot(df) +
 ```
 
 ### Geschlecht
-```{r, echo = False}
+```{r, echo = FALSE}
 jmv::descriptives(df, vars = "Gender", freq = TRUE)
 ```
 
 ### Bildung
-```{r, echo = False}
+```{r, echo = FALSE}
 jmv::descriptives(df, vars = "Edu", freq = TRUE)
 ```
 
 ### Wohnort
-```{r, echo = False}
+```{r, echo = FALSE}
 df$urban2 <- as.factor(df$Urban)
 jmv::descriptives(df, vars = "urban2", freq = TRUE)
 ```
@@ -140,10 +140,10 @@ df %>%
 ```
 
 3. Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke). 
-```{r, echo=FALSE}
+```{r, echo = FALSE}
 t.test(df$SzOeff, df$SzPriv, paired = TRUE)
 ```
-```{r, echo= FALSE}
+```{r, echo = FALSE}
 library(tidyverse)
 
 df_WAP <- df %>%
@@ -241,7 +241,7 @@ ggplot(df) +
  
 
 
-```{r, echo = False}
+```{r, echo = FALSE}
 jmv::linReg(data = df, 
             dep = c("SzPriv"), 
             covs = c("Priv", "Age"),
@@ -249,7 +249,7 @@ jmv::linReg(data = df,
             r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
 ```
 2. Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist abhängig von Privacy-Einstellungen und Alter. 
-```{r, echo = False}
+```{r, echo = FALSE}
 jmv::linReg(data = df, 
             dep = c("SzOeff"), 
             covs = c("Priv", "Age"),
@@ -278,7 +278,7 @@ n(d=0.8; "hoch")=51.04916
 
 
 ## Descriptives
-```{r descriptive, echo=FALSE}
+```{r descriptive, echo = FALSE}
 descriptives <- psych::describe(df)[c(41:45),c(3,4,8,9)]
 descriptives$alpha <- c(0.85, 0.83, 0.95, 0.97, 0.97)
 descriptives[,c(5,1:4)]
