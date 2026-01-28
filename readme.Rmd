@@ -160,15 +160,13 @@ df_WAP%>%
   plot.background  = element_rect(fill = "#F5F8FF", color = NA),
   panel.grid.major = element_line(color = "#CFCFF9"),
   panel.grid.minor = element_line(color = "#CFCFF9")
-)
- 
+) +
   labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
        subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
        x = "Szenario",
        y = "Nutzungsbereitschaft [1 - 6]",
        fill = "Szenario",
-       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
-  NULL
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes")
 ```
 
 
