@@ -1,15 +1,22 @@
 ## Inhaltsverzeichnis
 
-1.  Meet the AutorInnen
-2.  Forschungsfrage
-3.  Faktorenraum
-4.  Validierte Messinstrumente
+1.  [Meet the
+    AutorInnen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#poweranalysen)
+2.  [Forschungsfrage](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#forschungsfrage)
+3.  [Faktorenraum](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#faktorenraum)
+4.  [Validierte
+    Messinstrumente](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#validierte-messinstrumente)
 5.  [POWERanalysen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#poweranalysen)
-6.  Demografie
-    1.  Demografische Daten: Gender, Alter, Bildung, Wohnort
-    2.  Histogramm Altersverteilung
-7.  Descriptives: meet the Skalen
-8.  Hypothesen
+6.  [Demografie](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#demografie)
+    1.  [Demografische Daten: Gender, Alter, Bildung,
+        Wohnort](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#demografische-daten)
+    2.  [Histogramm
+        Altersverteilung](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#histogramm-altersverteilung)
+7.  [Descriptives: meet the
+    Skalen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#descriptives-meet-the-skalen)
+8.  [Hypothesen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#hypothesen)
+    1.  [Unterschiedshypothesen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#unterschiedshypothesen)
+    2.  [Zusammenhangshypothesen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#zusammenhangshypothesen)
 
 ## Meet the Autor\*innen
 
@@ -263,7 +270,7 @@ Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
-#### Zusammenhangshypothese für multiple lineare Regression
+#### Zusammenhangshypothesen für multiple lineare Regression
 
 **H1:** Die Nutzungsbereitschaft von innovativen Services der
 Kommunalverwaltung in Szenario A (öffentlicher Dienst) ist abhängig von
