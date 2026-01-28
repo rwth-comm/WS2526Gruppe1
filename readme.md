@@ -13,8 +13,13 @@
 
 ## Meet the Autor\*innen
 
-This research is presented to you by: \* Anastasiya \* Annika \* Henrik
-\* Maike \* Marie
+This research is presented to you by:
+
+-   Anastasiya
+-   Annika
+-   Henrik
+-   Maike
+-   Marie
 
 ## Forschungsfrage
 
