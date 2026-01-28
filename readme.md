@@ -1,7 +1,7 @@
 ## Inhaltsverzeichnis
 
 1.  [Meet the
-    AutorInnen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#poweranalysen)
+    Autor\*innen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#poweranalysen)
 2.  [Forschungsfrage](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#forschungsfrage)
 3.  [Faktorenraum](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#faktorenraum)
 4.  [Validierte
