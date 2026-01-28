@@ -118,7 +118,7 @@ df %>%
   ylim(0,6) +
   theme_minimal() +
   labs(title = "Männer zeigen eine höhere Nutzungsbereitschaft für Szenario B", 
-       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario A im Vergleich zwischen Männern und Frauen ", 
+       subtitle = "Balkendiagramm: Nutzungsbereitschaft Szenario B im Vergleich zwischen Männern und Frauen ", 
        x = "Geschlecht",
        y = "Nutzungsbereitschaft Szenario B (privatwirtschaftlich) [0 - 5]",
        fill = "Geschlecht",
@@ -155,19 +155,16 @@ df_WAP%>%
   scale_fill_manual(values=c("#0C0A9E", "#BFBEF7"))+ 
   ylim(0, 5) +
    geom_errorbar(width = 0.2, colour = rwthcolor$black) +
-   theme(
-  panel.background = element_rect(fill = "#F5F8FF", color = NA),
-  plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-  panel.grid.major = element_line(color = "#CFCFF9"),
-  panel.grid.minor = element_line(color = "#CFCFF9")
-) +
+   theme_minimal() +
+
   labs(title = "Die Nutzungsbereitschaft für Szenario A ist höher als für das Szenario B", 
        subtitle = "Unterschiede der Nutzungsbereitschaft für KI-Services, wenn die erhobenen Daten
-       vom Öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
+       vom öffentlichen Dienst oder der Privatwirtschaft genutzt werden", 
        x = "Szenario",
        y = "Nutzungsbereitschaft [1 - 6]",
        fill = "Szenario",
        caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes")
+
 ```
 
 
@@ -203,7 +200,8 @@ ggplot(df) +
   geom_smooth(method = "lm", color = "#BFBEF7") +
   labs(x = "Digital Literacy", 
        y = "Nutzungsbereitschaft für Szenario A (öffentlicher Dienst)", 
-       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario A (öffentlicher Dienst)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft
+       Szenario A (öffentlicher Dienst)", 
        subtitle = "", 
        caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
   theme_minimal()
@@ -220,8 +218,9 @@ ggplot(df) +
     geom_jitter(shape = "circle", size = 1.5, colour = "#0C0A9E", width = 0.2, height = 0.2, alpha = 0.5) +
   geom_smooth(method = "lm", color = "#BFBEF7") +
   labs(x = "Digital Literacy", 
-       y = "Nutzungsbereitschaft für Szenario B (private Dienste)", 
-       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft Szenario B (privater Dienst)", 
+       y = "Nutzungsbereitschaft für Szenario B (privater Dienst)", 
+       title = "Zusammenhang Digital Literacy und Nutzungsbereitschaft
+       Szenario B (privater Dienst)", 
        subtitle = "", 
        caption = "Schatten der Regressionsgraden zeigt 95% Konfidenzintervall. Jitter = 20%") +
   theme_minimal()
