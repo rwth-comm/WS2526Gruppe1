@@ -5,11 +5,11 @@
 3.  Faktorenraum
 4.  Validierte Messinstrumente
 5.  Demografie
-6.  Demografische Daten: Gender, Alter, Bildung, Wohnort
-7.  Histogramm Altersverteilung
-8.  Descriptives: meet the Skalen
-9.  Hypothesen
-10. POWERanalysen
+    1.  Demografische Daten: Gender, Alter, Bildung, Wohnort
+    2.  Histogramm Altersverteilung
+6.  Descriptives: meet the Skalen
+7.  Hypothesen
+8.  POWERanalysen
 
 ## This research is presented to you by
 

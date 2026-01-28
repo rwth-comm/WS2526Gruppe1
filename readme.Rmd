@@ -8,9 +8,9 @@ date: "2025-10-27"
 2. Forschungsfrage
 3. Faktorenraum
 4. Validierte Messinstrumente
-5. Demografie
-  1. Demografische Daten: Gender, Alter, Bildung, Wohnort
-  2. Histogramm Altersverteilung
+5. Demografie  
+    1. Demografische Daten: Gender, Alter, Bildung, Wohnort
+    2. Histogramm Altersverteilung
 6. Descriptives: meet the Skalen
 7. Hypothesen
 8. POWERanalysen
