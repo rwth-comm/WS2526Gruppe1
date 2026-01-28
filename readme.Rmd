@@ -226,21 +226,19 @@ ggplot(df) +
 ```
 
 #### Zusammenhangshypothese für multiple lineare Regression
-**H1:** Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  
- 
-
-
+**H1:** Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario A (öffentlicher Dienst) ist abhängig von Privacy-Einstellungen und Alter. 
 ```{r, echo = FALSE}
 jmv::linReg(data = df, 
-            dep = c("SzPriv"), 
+            dep = c("SzOeff"), 
             covs = c("Priv", "Age"),
             blocks = c("Priv", "Age"),
             r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
 ```
-**H2:** Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario A (öffentlicher Dienst Zwecke) ist abhängig von Privacy-Einstellungen und Alter. 
+
+**H2:** Die Nutzungsbereitschaft von innovativen Services der Kommunalverwaltung in Szenario B (privatwirtschaftliche Zwecke) ist abhängig von Privacy-Einstellungen und Alter.  
 ```{r, echo = FALSE}
 jmv::linReg(data = df, 
-            dep = c("SzOeff"), 
+            dep = c("SzPriv"), 
             covs = c("Priv", "Age"),
             blocks = c("Priv", "Age"),
             r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
