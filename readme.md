@@ -4,7 +4,7 @@
 2.  Forschungsfrage
 3.  Faktorenraum
 4.  Validierte Messinstrumente
-5.  POWERanalysen
+5.  [POWERanalysen](https://github.com/rwth-comm/WS2526Gruppe1?tab=readme-ov-file#poweranalysen)
 6.  Demografie
     1.  Demografische Daten: Gender, Alter, Bildung, Wohnort
     2.  Histogramm Altersverteilung
