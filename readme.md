@@ -149,6 +149,8 @@ Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke).
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
+    ## NULL
+
 #### Unterschiedshypothese für MANOVA
 
 **H1:** LandbewohnerInnen und StadtbewohnerInnen unterscheiden sich in
