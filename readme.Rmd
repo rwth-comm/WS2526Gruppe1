@@ -56,13 +56,7 @@ ggplot(df) +
        title = paste0("Altersverteiliung n = (", nrow(df), ")"), 
        subtitle = "Histogramm der Altersverteilung", 
        caption = "30 Bins") +
-  theme(
-  panel.background = element_rect(fill = "#F5F8FF", color = NA),
-  plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-  panel.grid.major = element_line(color = "#DCDBFD"),
-  panel.grid.minor = element_line(color = "#DCDBFD")
-)
-
+  theme_minimal()
 ```
 
 ### Demografische Daten
