@@ -48,7 +48,7 @@ Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beein
 
 ggplot(df) +
   aes(x = Age) +
-  geom_histogram(bins = 30L, fill = "#0C0A9E") +
+  geom_histogram(bins = 30L, fill = "#EB9109") +
   geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
   geom_text(x = mean(df$Age, na.rm = TRUE), y = 50, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
   labs(x = "Alter in Jahren", 
@@ -56,7 +56,13 @@ ggplot(df) +
        title = paste0("Altersverteiliung n = (", nrow(df), ")"), 
        subtitle = "Histogramm der Altersverteilung", 
        caption = "30 Bins") +
-  theme_minimal()
+  theme(
+  panel.background = element_rect(fill = "#F5F8FF", color = NA),
+  plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+  panel.grid.major = element_line(color = "#D5D4FC"),
+  panel.grid.minor = element_line(color = "#D5D4FC")
+)
+
 ```
 
 ### Demografische Daten
