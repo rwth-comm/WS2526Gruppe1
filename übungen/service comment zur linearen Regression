@@ -1,0 +1,10 @@
+service comment (nur so 90 % garantie auf richtigkeit): adjusted R^2 stellt dar, 
+wie viel Prozent der Varianz der abhängigen Variable (den Variablen) durch die unabhängige 
+Variable erklärt wird. Diese Betrachtung geht über den Mittelwertsvergleich hinaus. Bsp.: die 
+Varianz der Nutzungsbereitschaft wird zu x % von Privacy-EInstellungen erklärt. Das wird 
+durch das "Estimate" berechnet. Sollen Variablen verglichen werden, müssen die Estimates 
+bereinigt werden (da bspw. Alter immer höhere Werte hat als eine Skala), betrachtet man die 
+"standadisierten Estimates". aus mehreren Variablen setzen sich Modelle zusammen. Das beste 
+Modell hat die wenigsten Variablen und das größte stand. Estimate. Wir machen basically ein 
+lineares Gleichungssystem mit den Variablen, um das Intercept zu berechnen. Das funktioniert 
+nicht perfekt, daher kommt der Fehlerterm zustande.

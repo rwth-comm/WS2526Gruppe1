@@ -9,7 +9,7 @@ pwr::pwr.t.test(n = 200, sig.level = NULL , d = 0.2, power = 0.8)
 # service comment: sehr selten angewendetes Verfahren. Zeigt uns, wie unser Signifikantsniveau sein muss, um einen kleinen Effekt zu messen.
 
 # Variante 3: Effektstärke gesucht ----
-pwr::pwr.t.test(n = 110, sig.level = 0.05 , d = NULL, power = 0.8)
+pwr::pwr.t.test(n = 210, sig.level = 0.05 , d = NULL, power = 0.8)
 
 # Variante 4: Power gesucht ----
 

@@ -1,3 +1,18 @@
+## Inhaltsverzeichnis
+
+1.  meet the AutorInnen
+2.  Forschungsfrage
+3.  Faktorenraum
+4.  Validierte Messinstrumente
+5.  Demografie
+6.  Demografische Daten: Gender, Alter, Bildung, Wohnort
+7.  Histogramm Altersverteilung
+8.  Descriptives: meet the Skalen
+9.  Hypothesen
+10. POWERanalysen
+
+## This research is presented to you by
+
 -   Anastasiya
 -   Annika
 -   Henrik
@@ -32,13 +47,6 @@ Items gekürzt. Es wurde darauf geachtet, dass die Subskalen genug
 Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ## Demografie
-
-### Histogramm Altersverteilung
-
-    ## Warning: Removed 1 row containing non-finite outside the scale range
-    ## (`stat_bin()`).
-
-![](readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 ### Demografische Daten
 
@@ -93,6 +101,22 @@ Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
     ##    2            134      31.75355        51.42180   
     ##    3            205      48.57820       100.00000   
     ##  ──────────────────────────────────────────────────
+
+### Histogramm Altersverteilung
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+## Descriptives: meet the Skalen
+
+    ##        alpha mean   sd  min max
+    ## AD      0.85 4.47 1.22 1.00   6
+    ## Priv    0.83 3.57 0.98 1.00   6
+    ## DigLit  0.95 4.04 0.84 1.17   6
+    ## SzOeff  0.97 3.89 1.23 1.00   6
+    ## SzPriv  0.97 3.19 1.32 1.00   6
 
 ## Hypothesen
 
@@ -316,25 +340,7 @@ abhängig von Privacy-Einstellungen und Alter.
     ##    Age          -0.004820904    0.003899726    -1.236216     0.2170725        -0.05800612   
     ##  ──────────────────────────────────────────────────────────────────────────────────────────
 
-service comment (nur so 90 % garantie auf richtigkeit): adjusted R^2
-stellt dar, wie viel Prozent der Varianz der abhängigen Variable (den
-Variablen) durch die unabhängige Variable erklärt wird. Diese
-Betrachtung geht über den Mittelwertsvergleich hinaus. Bsp.: die Varianz
-der Nutzungsbereitschaft wird zu x % von Privacy-EInstellungen erklärt.
-Das wird durch das “Estimate” berechnet. Sollen Variablen verglichen
-werden, müssen die Estimates bereinigt werden (da bspw. Alter immer
-höhere Werte hat als eine Skala), betrachtet man die “standadisierten
-Estimates”. aus mehreren Variablen setzen sich Modelle zusammen. Das
-beste Modell hat die wenigsten Variablen und das größte stand. Estimate.
-Wir machen basically ein lineares Gleichungssystem mit den Variablen, um
-das Intercept zu berechnen. Das funktioniert nicht perfekt, daher kommt
-der Fehlerterm zustande.
-
-## Operationalisierung
-
-future text
-
-## Poweranalyse
+## Poweranalysen
 
 <figure>
 <img src="power.jpg" alt="Power" />
@@ -346,19 +352,11 @@ wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die
 Gruppe geteilt)  
 Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  
 Power (1-(4 · *α*)): 0,8  
-kleinste Effektstärke, die wir messen können (ausgerechnet):
-d=0.2961082  
+**kleinste Effektstärke, die wir mit n = 422 messen können
+(ausgerechnet): d = 0.2740325**
+
 Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach
-antizipiertem Effekt brauchen.  
+antizipiertem Effekt brauchen:  
 n(d=0.2; “schwach”)=786.8114  
 n(d=0.5; “mittel”)=127.5312  
 n(d=0.8; “hoch”)=51.04916
-
-## Descriptives
-
-    ##        alpha mean   sd  min max
-    ## AD      0.85 4.47 1.22 1.00   6
-    ## Priv    0.83 3.57 0.98 1.00   6
-    ## DigLit  0.95 4.04 0.84 1.17   6
-    ## SzOeff  0.97 3.89 1.23 1.00   6
-    ## SzPriv  0.97 3.19 1.32 1.00   6

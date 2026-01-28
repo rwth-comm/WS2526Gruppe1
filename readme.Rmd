@@ -3,7 +3,19 @@ title: "Untitled"
 output: md_document
 date: "2025-10-27"
 ---
+## Inhaltsverzeichnis
+1. meet the AutorInnen
+2. Forschungsfrage
+3. Faktorenraum
+4. Validierte Messinstrumente
+5. Demografie
+ 1. Demografische Daten: Gender, Alter, Bildung, Wohnort
+ 2. Histogramm Altersverteilung
+6. Descriptives: meet the Skalen
+7. Hypothesen
+8. POWERanalysen
 
+## This research is presented to you by
 * Anastasiya
 * Annika
 * Henrik
@@ -42,6 +54,12 @@ rwthcolor <- hcictools::rwth.colorpalette()
 Items, die nicht die Nutzung von digitalen Services der Kommunalverwaltung beeinflussen, wurden herausgekürzt. Dies umfasst hauptsächlich kooperative und generative Szenarien, die wir im Anwendungsfall nicht antizipieren. Die Skala wurde von 25 Items auf 18 Items gekürzt. Es wurde darauf geachtet, dass die Subskalen genug Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
 
 ## Demografie
+### Demografische Daten
+```{r}
+df$urban2 <- as.factor(df$Urban)
+jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
+```
+
 ### Histogramm Altersverteilung
 
 ```{r, echo=FALSE}
@@ -59,11 +77,13 @@ ggplot(df) +
   theme_minimal()
 ```
 
-### Demografische Daten
-```{r}
-df$urban2 <- as.factor(df$Urban)
-jmv::descriptives(df, vars=c("Gender", "Age", "Edu", "urban2"), freq = TRUE)
+## Descriptives: meet the Skalen
+```{r descriptive, echo = FALSE}
+descriptives <- psych::describe(df)[c(41:45),c(3,4,8,9)]
+descriptives$alpha <- c(0.85, 0.83, 0.95, 0.97, 0.97)
+descriptives[,c(5,1:4)]
 ```
+
 
 ## Hypothesen
 
@@ -247,30 +267,20 @@ jmv::linReg(data = df,
 ```
 
 
-service comment (nur so 90 % garantie auf richtigkeit): adjusted R^2 stellt dar, wie viel Prozent der Varianz der abhängigen Variable (den Variablen) durch die unabhängige Variable erklärt wird. Diese Betrachtung geht über den Mittelwertsvergleich hinaus. Bsp.: die Varianz der Nutzungsbereitschaft wird zu x % von Privacy-EInstellungen erklärt. Das wird durch das "Estimate" berechnet. Sollen Variablen verglichen werden, müssen die Estimates bereinigt werden (da bspw. Alter immer höhere Werte hat als eine Skala), betrachtet man die "standadisierten Estimates". aus mehreren Variablen setzen sich Modelle zusammen. Das beste Modell hat die wenigsten Variablen und das größte stand. Estimate. Wir machen basically ein lineares Gleichungssystem mit den Variablen, um das Intercept zu berechnen. Das funktioniert nicht perfekt, daher kommt der Fehlerterm zustande.
-
-## Operationalisierung
-future text
-
-## Poweranalyse  
+## Poweranalysen  
 ![Power](power.jpg)  
   
 antizipierte ProbandInnenanzahl: n=360  
 wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die Gruppe geteilt)  
 Signifikanzniveau (wir sind SozialwissenschaftlerInnen): $\alpha$ = 0,05  
 Power (1-(4 · $\alpha$)): 0,8  
-kleinste Effektstärke, die wir messen können (ausgerechnet): d=0.2961082  
-Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach antizipiertem Effekt brauchen.  
+**kleinste Effektstärke, die wir mit n = 422 messen können (ausgerechnet): d = 0.2740325**
+  
+Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach antizipiertem Effekt brauchen:    
 n(d=0.2; "schwach")=786.8114  
 n(d=0.5; "mittel")=127.5312  
 n(d=0.8; "hoch")=51.04916  
 
 
-## Descriptives
-```{r descriptive, echo = FALSE}
-descriptives <- psych::describe(df)[c(41:45),c(3,4,8,9)]
-descriptives$alpha <- c(0.85, 0.83, 0.95, 0.97, 0.97)
-descriptives[,c(5,1:4)]
-```
 
 
