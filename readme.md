@@ -1,23 +1,20 @@
 ## Inhaltsverzeichnis
 
-1.  meet the AutorInnen
+1.  Meet the AutorInnen
 2.  Forschungsfrage
 3.  Faktorenraum
 4.  Validierte Messinstrumente
-5.  Demografie
+5.  POWERanalysen
+6.  Demografie
     1.  Demografische Daten: Gender, Alter, Bildung, Wohnort
     2.  Histogramm Altersverteilung
-6.  Descriptives: meet the Skalen
-7.  Hypothesen
-8.  POWERanalysen
+7.  Descriptives: meet the Skalen
+8.  Hypothesen
 
-## This research is presented to you by
+## Meet the Autor\*innen
 
--   Anastasiya
--   Annika
--   Henrik
--   Maike
--   Marie
+This research is presented to you by:  
+\* Anastasiya \* Annika \* Henrik \* Maike \* Marie
 
 ## Forschungsfrage
 
@@ -45,6 +42,27 @@ hauptsächlich kooperative und generative Szenarien, die wir im
 Anwendungsfall nicht antizipieren. Die Skala wurde von 25 Items auf 18
 Items gekürzt. Es wurde darauf geachtet, dass die Subskalen genug
 Substanz (mindestens 3 Items) - und damit ihre Funktionalität behalten.
+
+## Poweranalysen
+
+<figure>
+<img src="power.jpg" alt="Power" />
+<figcaption aria-hidden="true">Power</figcaption>
+</figure>
+
+antizipierte ProbandInnenanzahl: n=360  
+wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die
+Gruppe geteilt)  
+Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  
+Power (1-(4 · *α*)): 0,8  
+**kleinste Effektstärke, die wir mit n = 422 messen können
+(ausgerechnet): d = 0.2740325**
+
+Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach
+antizipiertem Effekt brauchen:  
+n(d=0.2; “schwach”)=786.8114  
+n(d=0.5; “mittel”)=127.5312  
+n(d=0.8; “hoch”)=51.04916
 
 ## Demografie
 
@@ -339,24 +357,3 @@ abhängig von Privacy-Einstellungen und Alter.
     ##    Priv         -0.392202088    0.063006578    -6.224780    < .0000001        -0.29208110   
     ##    Age          -0.004820904    0.003899726    -1.236216     0.2170725        -0.05800612   
     ##  ──────────────────────────────────────────────────────────────────────────────────────────
-
-## Poweranalysen
-
-<figure>
-<img src="power.jpg" alt="Power" />
-<figcaption aria-hidden="true">Power</figcaption>
-</figure>
-
-antizipierte ProbandInnenanzahl: n=360  
-wird für die Poweranalyse halbiert (Gruppenvergleich, daher wird die
-Gruppe geteilt)  
-Signifikanzniveau (wir sind SozialwissenschaftlerInnen): *α* = 0,05  
-Power (1-(4 · *α*)): 0,8  
-**kleinste Effektstärke, die wir mit n = 422 messen können
-(ausgerechnet): d = 0.2740325**
-
-Poweranalysen, um herauszufinden, wie viele ProbandInnen wir je nach
-antizipiertem Effekt brauchen:  
-n(d=0.2; “schwach”)=786.8114  
-n(d=0.5; “mittel”)=127.5312  
-n(d=0.8; “hoch”)=51.04916
