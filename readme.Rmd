@@ -155,6 +155,7 @@ ggplot(df) +
   )
 
 ```
+
 ### Boxplot Digital Literacy
 ```{r, echo = FALSE}
 ggplot(df) +

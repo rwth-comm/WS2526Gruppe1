@@ -154,8 +154,10 @@ n(d=0.8; “hoch”)=51.04916
 
 ### Boxplot Privacy-Einstellung
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png) \###
-Boxplot Digital Literacy
+![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
+### Boxplot Digital Literacy
+
 ![](readme_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 ### Boxplot Nutzungsbereitschaft Szenario A (öffentlicher Dienst)
