@@ -148,6 +148,24 @@ n(d=0.8; “hoch”)=51.04916
     ## SzOeff  0.97 3.89 1.23 1.00   6
     ## SzPriv  0.97 3.19 1.32 1.00   6
 
+### Boxplot Analog / Digital
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+### Boxplot Privacy-Einstellung
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png) \###
+Boxplot Digital Literacy
+![](readme_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
+### Boxplot Nutzungsbereitschaft Szenario A (öffentlicher Dienst)
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+
+### Boxplot Nutzungsbereitschaft Szenario B (privatwirtschaftliche Zwecke)
+
+![](readme_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+
 ## Hypothesen
 
 ### Unterschiedshypothesen
@@ -167,7 +185,7 @@ in Szenario A (öffentlicher Dienst).
     ## mean of x mean of y 
     ##  4.102397  3.769517
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
 **H2:** Männer und Frauen unterscheiden sich in der Nutzungsbereitschaft
 in Szenario B (privatwirtschaftliche Zwecke).
@@ -184,7 +202,7 @@ in Szenario B (privatwirtschaftliche Zwecke).
     ## mean of x mean of y 
     ##  3.148148  3.206939
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 **H3:** Die Nutzungsbereitschaft ist bei Szenario A (öffentlicher
 Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke).
@@ -201,7 +219,7 @@ Dienst) höher, als bei Szenario B (privatwirtschaftliche Zwecke).
     ## mean difference 
     ##       0.7045814
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 #### Unterschiedshypothese für MANOVA
 
@@ -249,7 +267,7 @@ Nutzungsbereitschaft in Szenario A (öffentlicher Dienst).
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-17-1.png)
 
 **H2:** Es gibt einen Zusammenhang zwischen Digital Literacy und
 Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
@@ -268,7 +286,7 @@ Nutzungsbereitschaft in Szenario B (privatwirtschaftliche Zwecke).
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+![](readme_files/figure-markdown_strict/unnamed-chunk-19-1.png)
 
 #### Zusammenhangshypothesen für multiple lineare Regression
 

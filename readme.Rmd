@@ -105,6 +105,130 @@ descriptives$alpha <- c(0.85, 0.83, 0.95, 0.97, 0.97)
 descriptives[,c(5,1:4)]
 ```
 
+### Boxplot Analog / Digital
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = "", y = AD) +
+  geom_boxplot(fill = "#CFCFF9") +
+  labs(
+    x = " ",
+    y = " ",
+    title = "Deskriptive Darstellung des Faktors Analog / Digital (AD)",
+    subtitle = "Darstellung als Boxplot",
+    caption = "Analog / Digital"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0.5),
+    panel.background = element_rect(fill = "#F5F8FF", color = NA),
+    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+    panel.grid.major = element_line(color = "#CFCFF9"),
+    panel.grid.minor = element_line(color = "#CFCFF9")
+  )
+
+
+```
+
+### Boxplot Privacy-Einstellung
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = "", y = Priv) +
+  geom_boxplot(fill = "#CFCFF9") +
+  labs(
+    x = " ",
+    y = " ",
+    title = "Deskriptive Darstellung des Faktors Privacy-Einstellung (Priv)",
+    subtitle = "Darstellung als Boxplot",
+    caption = "Privacy-Einstellung"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0.5),
+    panel.background = element_rect(fill = "#F5F8FF", color = NA),
+    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+    panel.grid.major = element_line(color = "#CFCFF9"),
+    panel.grid.minor = element_line(color = "#CFCFF9")
+  )
+
+```
+### Boxplot Digital Literacy
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = "", y = DigLit) +
+  geom_boxplot(fill = "#CFCFF9") +
+  labs(
+    x = " ",
+    y = " ",
+    title = "Deskriptive Darstellung des Faktors Digital Literacy (DigLit)",
+    subtitle = "Darstellung als Boxplot",
+    caption = "Digital Literacy"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0.5),
+    panel.background = element_rect(fill = "#F5F8FF", color = NA),
+    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+    panel.grid.major = element_line(color = "#CFCFF9"),
+    panel.grid.minor = element_line(color = "#CFCFF9")
+  )
+
+```
+
+### Boxplot Nutzungsbereitschaft Szenario A (öffentlicher Dienst)
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = "", y = SzOeff) +
+  geom_boxplot(fill = "#CFCFF9") +
+  labs(
+    x = " ",
+    y = " ",
+    title = "Deskriptive Darstellung des Faktors Nutzungsbereitschaft Szenario A (SzOeff)",
+    subtitle = "Darstellung als Boxplot",
+    caption = "Nutzungsbereitschaft Szenario A (öffentlicher Dienst)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0.5),
+    panel.background = element_rect(fill = "#F5F8FF", color = NA),
+    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+    panel.grid.major = element_line(color = "#CFCFF9"),
+    panel.grid.minor = element_line(color = "#CFCFF9")
+  )
+
+```
+
+### Boxplot Nutzungsbereitschaft Szenario B (privatwirtschaftliche Zwecke)
+```{r, echo = FALSE}
+ggplot(df) +
+  aes(x = "", y = SzPriv) +
+  geom_boxplot(fill = "#CFCFF9") +
+  labs(
+    x = " ",
+    y = " ",
+    title = "Deskriptive Darstellung des Faktors Nutzungsbereitschaft Szenario B (SzPriv)",
+    subtitle = "Darstellung als Boxplot",
+    caption = "Nutzungsbereitschaft Szenario B (privatwirtschaftliche Zwecke)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0.5),
+    panel.background = element_rect(fill = "#F5F8FF", color = NA),
+    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
+    panel.grid.major = element_line(color = "#CFCFF9"),
+    panel.grid.minor = element_line(color = "#CFCFF9")
+  )
+
+```
 
 ## Hypothesen
 
