@@ -122,11 +122,8 @@ ggplot(df) +
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 0.5),
-    panel.background = element_rect(fill = "#F5F8FF", color = NA),
-    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-    panel.grid.major = element_line(color = "#CFCFF9"),
-    panel.grid.minor = element_line(color = "#CFCFF9")
-  )
+)
+  
 
 
 ```
@@ -148,11 +145,7 @@ ggplot(df) +
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 0.5),
-    panel.background = element_rect(fill = "#F5F8FF", color = NA),
-    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-    panel.grid.major = element_line(color = "#CFCFF9"),
-    panel.grid.minor = element_line(color = "#CFCFF9")
-  )
+)
 
 ```
 
@@ -173,11 +166,7 @@ ggplot(df) +
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 0.5),
-    panel.background = element_rect(fill = "#F5F8FF", color = NA),
-    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-    panel.grid.major = element_line(color = "#CFCFF9"),
-    panel.grid.minor = element_line(color = "#CFCFF9")
-  )
+)
 
 ```
 
@@ -198,11 +187,7 @@ ggplot(df) +
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 0.5),
-    panel.background = element_rect(fill = "#F5F8FF", color = NA),
-    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-    panel.grid.major = element_line(color = "#CFCFF9"),
-    panel.grid.minor = element_line(color = "#CFCFF9")
-  )
+)
 
 ```
 
@@ -223,11 +208,7 @@ ggplot(df) +
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 0.5),
-    panel.background = element_rect(fill = "#F5F8FF", color = NA),
-    plot.background  = element_rect(fill = "#F5F8FF", color = NA),
-    panel.grid.major = element_line(color = "#CFCFF9"),
-    panel.grid.minor = element_line(color = "#CFCFF9")
-  )
+)
 
 ```
 
